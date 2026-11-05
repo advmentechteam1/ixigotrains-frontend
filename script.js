@@ -9,7 +9,7 @@ const links = [
 ];
 $('#site-header').outerHTML = `
 <header class="navbar" id="navbar">
-  <a href="index.html" class="logo"><svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a7fe0"/><stop offset="1" stop-color="#0b3fa8"/></linearGradient></defs><rect width="48" height="48" rx="14" fill="url(#lg)"/><path d="M14 31V20a10 10 0 0 1 10-10h0a10 10 0 0 1 10 10v11a3 3 0 0 1-3 3H17a3 3 0 0 1-3-3z" fill="#fff"/><rect x="18" y="16" width="12" height="8" rx="2" fill="#0b3fa8"/><circle cx="19" cy="29" r="2" fill="#f47b20"/><circle cx="29" cy="29" r="2" fill="#f47b20"/><path d="M13 40l5-4M35 40l-5-4M10 43h28" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg><span class="logo-text">Ixigo<b>Trains</b><em>.in</em></span></a>
+  <a href="index.html" class="logo"><svg class="logo-mark" aria-hidden="true" viewBox="0 0 48 48"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a7fe0"/><stop offset="1" stop-color="#0b3fa8"/></linearGradient></defs><rect width="48" height="48" rx="14" fill="url(#lg)"/><path d="M24 6c-6.8 0-12.2 5.3-12.2 11.9 0 8.4 12.2 20.6 12.2 20.6s12.2-12.2 12.2-20.6C36.2 11.3 30.8 6 24 6z" fill="#fff"/><circle cx="24" cy="17.8" r="5.2" fill="#0b3fa8"/><path d="M7 42.5c6-3.6 11-3.6 17-1.2s11 2.4 17-1.3" fill="none" stroke="#f47b20" stroke-width="3.2" stroke-linecap="round"/></svg><span class="logo-text">Ixigo<b>Trains</b><em>.in</em></span></a>
   <nav id="nav">${links.map(([h, t]) => `<a href="${h}" class="${page === h ? 'active' : ''}">${t}</a>`).join('')}</nav>
   <a href="support.html" class="login"><i class="fa-regular fa-user"></i> Login / Sign Up</a>
   <button class="menu-btn" id="menuBtn" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
@@ -19,11 +19,11 @@ $('#site-footer').outerHTML = `
   <div class="container">
     <div class="f-grid">
       <div class="f-brand">
-        <a href="index.html" class="logo light"><svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a7fe0"/><stop offset="1" stop-color="#0b3fa8"/></linearGradient></defs><rect width="48" height="48" rx="14" fill="url(#lg)"/><path d="M14 31V20a10 10 0 0 1 10-10h0a10 10 0 0 1 10 10v11a3 3 0 0 1-3 3H17a3 3 0 0 1-3-3z" fill="#fff"/><rect x="18" y="16" width="12" height="8" rx="2" fill="#0b3fa8"/><circle cx="19" cy="29" r="2" fill="#f47b20"/><circle cx="29" cy="29" r="2" fill="#f47b20"/><path d="M13 40l5-4M35 40l-5-4M10 43h28" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg><span class="logo-text">Ixigo<b>Trains</b><em>.in</em></span></a>
-        <p>Your trusted partner for train ticket booking, PNR status, live train updates and more.</p>
+        <a href="index.html" class="logo light"><svg class="logo-mark" aria-hidden="true" viewBox="0 0 48 48"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a7fe0"/><stop offset="1" stop-color="#0b3fa8"/></linearGradient></defs><rect width="48" height="48" rx="14" fill="url(#lg)"/><path d="M24 6c-6.8 0-12.2 5.3-12.2 11.9 0 8.4 12.2 20.6 12.2 20.6s12.2-12.2 12.2-20.6C36.2 11.3 30.8 6 24 6z" fill="#fff"/><circle cx="24" cy="17.8" r="5.2" fill="#0b3fa8"/><path d="M7 42.5c6-3.6 11-3.6 17-1.2s11 2.4 17-1.3" fill="none" stroke="#f47b20" stroke-width="3.2" stroke-linecap="round"/></svg><span class="logo-text">Ixigo<b>Trains</b><em>.in</em></span></a>
+        <p>Your trusted partner for train, bus and flight ticket booking, PNR status, live updates and more.</p>
       </div>
       <div class="f-col"><h5>Quick Links</h5><a href="index.html">Home</a><a href="pnr.html">PNR Status</a><a href="schedule.html">Train Schedule</a><a href="live.html">Live Train Status</a></div>
-      <div class="f-col"><h5>Our Services</h5><a href="index.html">Book Train Tickets</a><a href="schedule.html">Seat Availability</a><a href="schedule.html">Train Between Stations</a><a href="offers.html">Travel Offers</a></div>
+      <div class="f-col"><h5>Our Services</h5><a href="train.html">Book Train Tickets</a><a href="bus.html">Book Bus Tickets</a><a href="flight.html">Book Flight Tickets</a><a href="schedule.html">Train Between Stations</a><a href="offers.html">Travel Offers</a></div>
       <div class="f-col"><h5>Support</h5><a href="support.html">Help Center</a><a href="support.html#contact">Contact Support</a><a href="support.html#faq">FAQs</a><a href="support.html">Terms &amp; Conditions</a></div>
       <div class="f-col"><h5>Follow Us</h5><div class="social">
         <a href="#" class="fb"><i class="fa-brands fa-facebook-f"></i></a><a href="#" class="ig"><i class="fa-brands fa-instagram"></i></a>
@@ -237,3 +237,161 @@ if (nf) nf.addEventListener('submit', e => {
   nf.reset();
 });
 $$('img[data-fallback]').forEach(i => i.addEventListener('error', () => i.style.visibility = 'hidden'));
+
+/* ---------- hero image sliders ---------- */
+$$('.hero-slides').forEach(box => {
+  const sl = $$('.slide', box);
+  if (sl.length < 2) return;
+  const dots = $$('#slideDots button'), words = ['Train', 'Bus', 'Flight'], hw = $('#heroWord');
+  let cur = 0, timer;
+  const show = i => {
+    cur = i;
+    sl.forEach((s, k) => s.classList.toggle('active', k === i));
+    dots.forEach((d, k) => d.classList.toggle('active', k === i % 3));
+    if (hw) hw.textContent = words[i % 3];
+  };
+  const start = () => { clearInterval(timer); timer = setInterval(() => show((cur + 1) % sl.length), 4500); };
+  dots.forEach((d, i) => d.addEventListener('click', () => { show(i); start(); }));
+  start();
+});
+
+/* ---------- mode tabs (train / bus / flight) ---------- */
+const modeTabs = $('#modeTabs');
+if (modeTabs) {
+  const tabs = $$('.tab', modeTabs);
+  tabs.forEach(t => t.addEventListener('click', () => {
+    tabs.forEach(x => x.classList.toggle('active', x === t));
+    $$('.tab-panel').forEach(p => p.classList.toggle('active', p.id === 'panel-' + t.dataset.tab));
+  }));
+}
+$$('.swap[data-a]').forEach(b => b.addEventListener('click', () => {
+  const x = $('#' + b.dataset.a), y = $('#' + b.dataset.b); [x.value, y.value] = [y.value, x.value];
+}));
+const CITIES = ['Delhi', 'Mumbai', 'Bengaluru', 'Hyderabad', 'Chennai', 'Kolkata', 'Pune', 'Jaipur', 'Lucknow', 'Ahmedabad', 'Goa', 'Chandigarh', 'Agra', 'Varanasi', 'Indore', 'Kochi'];
+const cdl = document.createElement('datalist');
+cdl.id = 'cities';
+cdl.innerHTML = CITIES.map(c => `<option value="${c}">`).join('');
+document.body.appendChild(cdl);
+$$('input[name=trip]').forEach(r => r.addEventListener('change', () => {
+  const round = $('input[name=trip]:checked').value === 'round', ret = $('#flRet');
+  ret.disabled = !round; $('#retField').classList.toggle('disabled', !round);
+  if (round && !ret.value) ret.value = $('#flDate').value;
+}));
+if ($('#retField')) $('#retField').classList.add('disabled');
+function goSearch(page, a, b, extra) {
+  const f = $('#' + a).value.trim(), t = $('#' + b).value.trim();
+  if (!f || !t) return toast('Please enter origin and destination.');
+  if (f.toLowerCase() === t.toLowerCase()) return toast('Origin and destination cannot be the same.');
+  location.href = `${page}?from=${encodeURIComponent(f)}&to=${encodeURIComponent(t)}` + extra;
+}
+if ($('#busForm') && !$('#busResults')) $('#busForm').addEventListener('submit', e => {
+  e.preventDefault();
+  goSearch('bus.html', 'busFrom', 'busTo', `&date=${$('#busDate').value}&type=${encodeURIComponent($('#busType').value)}`);
+});
+if ($('#flightForm') && !$('#flightResults')) $('#flightForm').addEventListener('submit', e => {
+  e.preventDefault();
+  goSearch('flight.html', 'flFrom', 'flTo', `&date=${$('#flDate').value}&ret=${$('#flRet').disabled ? '' : $('#flRet').value}&pax=${encodeURIComponent($('#flClass').value)}`);
+});
+
+/* ---------- bus & flight result pages (demo data) ---------- */
+const BUSES = [
+  ['Orange Travels', 'Volvo Multi-Axle AC Sleeper', '21:30', '06:00', '8h 30m', 1450, 4.4, 14],
+  ['National Express', 'AC Semi Sleeper 2+2', '22:15', '05:45', '7h 30m', 980, 4.1, 22],
+  ['Blue Line Tours', 'Non-AC Seater 2+2', '20:00', '05:30', '9h 30m', 620, 3.9, 31],
+  ['Royal Cruiser', 'Scania AC Sleeper', '23:00', '06:30', '7h 30m', 1690, 4.6, 9],
+  ['State Transport', 'Deluxe Seater', '19:45', '05:15', '9h 30m', 540, 3.8, 40]
+];
+const FLIGHTS = [
+  ['IndiGo', '6E-2174', '06:10', '08:25', '2h 15m', 'Non-stop', 4850],
+  ['Air India', 'AI-865', '09:30', '11:50', '2h 20m', 'Non-stop', 5620],
+  ['Akasa Air', 'QP-1307', '13:05', '15:20', '2h 15m', 'Non-stop', 4390],
+  ['Air India Express', 'IX-1198', '17:40', '20:05', '2h 25m', 'Non-stop', 6280],
+  ['SpiceJet', 'SG-8152', '21:15', '00:45', '3h 30m', '1 stop', 3990]
+];
+function loadResultPage(kind) {
+  const q = new URLSearchParams(location.search);
+  const ids = kind === 'bus' ? ['busFrom', 'busTo', 'busDate'] : ['flFrom', 'flTo', 'flDate'];
+  const box = $(kind === 'bus' ? '#busResults' : '#flightResults'), form = $(kind === 'bus' ? '#busForm' : '#flightForm');
+  const render = () => {
+    const f = $('#' + ids[0]).value.trim(), t = $('#' + ids[1]).value.trim(), d = $('#' + ids[2]).value;
+    if (!f || !t) return toast('Please enter origin and destination.');
+    if (f.toLowerCase() === t.toLowerCase()) return toast('Origin and destination cannot be the same.');
+    const esc = x => x.replace(/</g, '&lt;');
+    const head = `<span class="demo-note"><i class="fa-solid fa-circle-info"></i> Demo results — sample ${kind === 'bus' ? 'buses' : 'flights'} only</span>
+      <h3 style="color:var(--navy);margin-bottom:6px">${esc(f)} <i class="fa-solid fa-arrow-right" style="color:var(--orange)"></i> ${esc(t)} · ${d}</h3>`;
+    const rows = kind === 'bus'
+      ? BUSES.map((b, i) => `<div class="res-card" style="animation-delay:${i * .08}s"><div><b>${b[0]}</b><small>${b[1]}</small></div>
+          <div class="times"><div><b>${b[2]}</b><small>${esc(f)}</small></div><i class="fa-solid fa-bus"></i><div><b>${b[3]}</b><small>${esc(t)}</small></div><small>${b[4]}</small></div>
+          <div><b>₹${b[5]}</b><small><i class="fa-solid fa-star" style="color:#f5a800"></i> ${b[6]} · ${b[7]} seats left</small></div>
+          <button class="btn" style="padding:9px 18px;font-size:13px" onclick="toast('Seat selection opens soon (demo)')">Select Seat</button></div>`).join('')
+      : FLIGHTS.map((b, i) => `<div class="res-card" style="animation-delay:${i * .08}s"><div><b>${b[0]}</b><small>${b[1]}</small></div>
+          <div class="times"><div><b>${b[2]}</b><small>${esc(f)}</small></div><i class="fa-solid fa-plane"></i><div><b>${b[3]}</b><small>${esc(t)}</small></div><small>${b[4]} · ${b[5]}</small></div>
+          <div><b>₹${b[6].toLocaleString('en-IN')}</b><small>per adult</small></div>
+          <button class="btn" style="padding:9px 18px;font-size:13px" onclick="toast('Booking opens soon (demo)')">Book</button></div>`).join('');
+    box.innerHTML = `<div class="panel">${head}${rows}</div>`;
+    box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  };
+  if (q.get('from')) {
+    $('#' + ids[0]).value = q.get('from'); $('#' + ids[1]).value = q.get('to') || '';
+    if (q.get('date')) $('#' + ids[2]).value = q.get('date');
+    if (kind === 'bus' && q.get('type')) $('#busType').value = q.get('type');
+    if (kind === 'flight' && q.get('pax')) $('#flClass').value = q.get('pax');
+    render();
+  }
+  form.addEventListener('submit', e => { e.preventDefault(); render(); });
+  $$('.chip-link[data-from],.route[data-from]').forEach(c => c.addEventListener('click', () => {
+    $('#' + ids[0]).value = c.dataset.from; $('#' + ids[1]).value = c.dataset.to; render();
+  }));
+}
+if ($('#busResults')) loadResultPage('bus');
+if ($('#flightResults')) loadResultPage('flight');
+
+/* ---------- bus & flight status / live demo forms ---------- */
+const esc2 = x => String(x).replace(/[<>&"]/g, c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;' }[c]));
+const demo = '<span class="demo-note"><i class="fa-solid fa-circle-info"></i> Demo result — not real data</span>';
+function bind(id, fn) { const f = $('#' + id); if (f) f.addEventListener('submit', e => { e.preventDefault(); fn(); }); }
+bind('busStatusForm', () => {
+  const t = $('#busTkt').value.trim().toUpperCase(), m = $('#busMob').value.trim();
+  if (!/^[A-Z]{1,3}\d{4,8}$/.test(t)) return toast('Enter a valid ticket number, e.g. BT123456.');
+  if (!/^\d{10}$/.test(m)) return toast('Enter a valid 10 digit mobile number.');
+  const ok = +t.slice(-1) % 2 === 0;
+  $('#busStatusRes').innerHTML = `<div class="panel">${demo}<h4 style="color:var(--navy)">Ticket ${esc2(t)}</h4>
+    <p><span class="pill ${ok ? 'ok' : 'wl'}">${ok ? 'CONFIRMED' : 'RESCHEDULED'}</span></p>
+    <p>Delhi → Jaipur · Volvo AC Seater</p><p>Seat <b>${12 + +t.slice(-1)}A</b> · Boarding: Kashmere Gate, ${ok ? '06:30' : '07:00'}</p></div>`;
+});
+bind('flightStatusForm', () => {
+  const p = $('#flPnr').value.trim().toUpperCase(), n = $('#flName').value.trim();
+  if (!/^[A-Z0-9]{6}$/.test(p)) return toast('Enter a valid 6 character booking reference.');
+  if (!n) return toast('Enter the passenger last name.');
+  const ok = p.charCodeAt(5) % 2 === 0;
+  $('#flightStatusRes').innerHTML = `<div class="panel">${demo}<h4 style="color:var(--navy)">Booking ${esc2(p)}</h4>
+    <p><span class="pill ${ok ? 'ok' : 'wl'}">${ok ? 'TICKETED' : 'ON HOLD'}</span></p>
+    <p>Delhi → Mumbai · ${esc2(n)}</p><p>Departure <b>09:30</b> · Web check-in opens 48 hours before</p></div>`;
+});
+bind('busLiveForm', () => {
+  const t = $('#busLiveTkt').value.trim();
+  if (!t) return toast('Enter ticket number or bus number.');
+  const pct = 40 + (t.length * 7) % 45;
+  $('#busLiveRes').innerHTML = `<div class="panel">${demo}<h4 style="color:var(--navy)">${esc2(t.toUpperCase())}</h4>
+    <p>Last crossed: <b>Kotputli</b> · Next: <b>Shahpura</b></p><p>Running <b>on time</b> · ETA 11:50 at Jaipur</p>
+    <div style="height:8px;border-radius:6px;background:#e8eef9;overflow:hidden;margin-top:8px"><div id="busBar" style="height:100%;width:0;background:linear-gradient(90deg,#2eaa4f,#ffb066);transition:width 1.2s"></div></div></div>`;
+  setTimeout(() => { const b = $('#busBar'); if (b) b.style.width = pct + '%'; }, 100);
+});
+bind('flightLiveForm', () => {
+  const f = $('#flLiveNo').value.trim();
+  if (!f) return toast('Enter a flight number.');
+  const late = f.length % 2;
+  $('#flightLiveRes').innerHTML = `<div class="panel">${demo}<h4 style="color:var(--navy)">${esc2(f.toUpperCase())}</h4>
+    <p><span class="pill ${late ? 'wl' : 'ok'}">${late ? 'DELAYED 25 MIN' : 'ON TIME'}</span></p>
+    <p>Delhi (T3) → Mumbai (T2)</p><p>Departs <b>${late ? '09:55' : '09:30'}</b> · Gate <b>B${12 + f.length}</b> · Arrives <b>${late ? '12:15' : '11:50'}</b></p></div>`;
+});
+
+/* ---------- label table cells so tables can stack on phones ---------- */
+function labelTables(root = document) {
+  $$('table.tbl', root).forEach(t => {
+    const heads = $$('thead th', t).map(h => h.textContent.trim());
+    $$('tbody tr', t).forEach(tr => $$('td', tr).forEach((td, i) => { if (!td.hasAttribute('data-label')) td.setAttribute('data-label', heads[i] || ''); }));
+  });
+}
+labelTables();
+new MutationObserver(() => labelTables()).observe(document.body, { childList: true, subtree: true });

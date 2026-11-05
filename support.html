@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <title>Support – IxigoTrains.in</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="style.css">
@@ -15,9 +16,9 @@
     <div class="reveal left">
       <span class="crumb"><i class="fa-solid fa-house"></i> Home / Support</span>
       <h1>How can we <span>help</span> you?</h1>
-      <p>Our support team is available 24×7 for bookings, refunds, payments and travel queries.</p>
+      <p>Find answers on bookings, cancellations, refunds and payments for trains, buses and flights.</p>
       <form class="help-search" onsubmit="event.preventDefault();document.getElementById('faq').scrollIntoView({behavior:'smooth'})"><input placeholder="Search help topics, e.g. refund"><button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Search</button></form>
-      <div class="chips"><span><i class="fa-solid fa-headset"></i>24×7 support</span><span><i class="fa-solid fa-clock"></i>2 min chat wait</span><span><i class="fa-solid fa-language"></i>Hindi &amp; English</span></div>
+      <div class="chips"><span><i class="fa-solid fa-train"></i>Train</span><span><i class="fa-solid fa-bus"></i>Bus</span><span><i class="fa-solid fa-plane"></i>Flight</span></div>
     </div>
     <div class="tiles reveal right">
       <div class="tile"><i class="fa-solid fa-ticket"></i>Booking</div>
@@ -31,12 +32,17 @@
 <section style="padding-top:0" id="contact">
   <div class="container">
     <div class="contact-grid">
-      <div class="card reveal d1"><i class="fa-solid fa-book-open big"></i><h4>Help Center</h4><p>Browse answers to common questions<br>Available 24×7</p></div>
-      <div class="card reveal d2"><i class="fa-solid fa-paper-plane big"></i><h4>Send a Message</h4><p>Use the form below<br>Reply within 24 hours</p></div>
-      <div class="card reveal d3"><i class="fa-solid fa-comments big"></i><h4>Live Chat</h4><p>Chat with an agent<br>Average wait 2 minutes</p></div>
+      <div class="card reveal d1"><i class="fa-solid fa-book-open big"></i><h4>Help Center</h4><p>Browse answers to common questions<br>Always available</p></div>
+      <div class="card reveal d2"><i class="fa-solid fa-paper-plane big"></i><h4>Send a Message</h4><p>Use the form below<br>We reply by email</p></div>
+      <div class="card reveal d3"><i class="fa-solid fa-phone big"></i><h4>Railway Helpline</h4><p>Dial 139 for train enquiries<br>and on-board emergencies</p></div>
     </div>
   </div>
 </section>
+<!--modes-->
+<section><div class="container"><div class="center reveal"><h2 class="title">Bus &amp; Flight Help</h2><span class="underline"></span><p class="sub">Get help for every kind of booking.</p></div><div class="svc-grid"><div class="card reveal d1"><i class="fa-solid fa-bus big"></i><h4>Bus Booking Help</h4><p>Seat selection, boarding points and operator changes.</p></div><div class="card reveal d2"><i class="fa-solid fa-plane big"></i><h4>Flight Booking Help</h4><p>Name correction, web check-in and baggage.</p></div><div class="card reveal d3"><i class="fa-solid fa-rotate-left big"></i><h4>Bus Refunds</h4><p>Cancellation charges and refund timelines for buses.</p></div><div class="card reveal d4"><i class="fa-solid fa-ban big"></i><h4>Flight Cancellation</h4><p>Cancel or reschedule flights and track refunds.</p></div></div></div></section>
+<section class="bg-soft"><div class="container"><div class="center reveal"><h2 class="title">Bus &amp; Flight Cancellation Rules</h2><span class="underline"></span><p class="sub">Charges are set by the operator or airline, not by us.</p></div><div class="panel reveal" style="margin:30px 0 0"><div class="table-wrap"><table class="tbl"><thead><tr><th>Mode</th><th>Who sets the charge</th><th>Where you can see it</th><th>If the trip is cancelled by them</th></tr></thead><tbody><tr><td><b>Bus</b></td><td>Bus operator</td><td>Cancellation policy shown before you pay</td><td>Full refund or rebooking</td></tr><tr><td><b>Flight</b></td><td>Airline (fare type)</td><td>Fare rules shown before you pay</td><td>Full refund or rebooking as per DGCA rules</td></tr></tbody></table></div></div></div></section>
+<section><div class="container"><div class="center reveal"><h2 class="title">Bus &amp; Flight FAQs</h2><span class="underline"></span></div><div class="faq reveal"><div class="faq-item"><button class="faq-q">How do I cancel a bus ticket? <i class="fa-solid fa-plus"></i></button><div class="faq-a">Share your ticket number on Support and request cancellation. Refund is sent as per the operator policy.</div></div><div class="faq-item"><button class="faq-q">Can I change the name on a flight ticket? <i class="fa-solid fa-plus"></i></button><div class="faq-a">Minor spelling corrections are allowed by most airlines. Full name changes are usually not permitted.</div></div><div class="faq-item"><button class="faq-q">What if my bus is cancelled by the operator? <i class="fa-solid fa-plus"></i></button><div class="faq-a">You get a full refund to your original payment mode, or you can rebook another bus.</div></div><div class="faq-item"><button class="faq-q">What if my flight is delayed or cancelled? <i class="fa-solid fa-plus"></i></button><div class="faq-a">The airline will offer a refund or re-booking on the next available flight as per DGCA rules.</div></div><div class="faq-item"><button class="faq-q">How early should I reach the airport? <i class="fa-solid fa-plus"></i></button><div class="faq-a">Reach at least 2 hours before a domestic flight departure.</div></div></div></div></section>
+
 
 <section class="bg-soft">
   <div class="container form-grid">
@@ -76,16 +82,7 @@
     </div>
   </div>
 </section>
-<section class="bg-soft">
-  <div class="container split" style="grid-template-columns:1fr 1fr">
-    <div class="reveal left"><h2 class="title">Support Hours</h2><span class="underline"></span>
-      <ul class="checks"><li><i class="fa-solid fa-clock"></i> Live chat &amp; help center: 24×7</li><li><i class="fa-solid fa-envelope-open-text"></i> Message replies: within 24 hours</li><li><i class="fa-solid fa-language"></i> Hindi and English supported</li></ul></div>
-    <div class="reveal right"><div class="panel" style="margin:0"><h4 style="color:var(--navy);margin-bottom:12px">Support response times</h4>
-      <div class="progress"><div style="width:96%"></div></div><small>Help center — instant</small>
-      <div class="progress"><div style="width:85%"></div></div><small>Live chat — ~2 minutes</small>
-      <div class="progress"><div style="width:60%"></div></div><small>Contact form — within 24 hours</small></div></div>
-  </div>
-</section>
+<section class="bg-soft"><div class="container"><div class="center reveal"><h2 class="title">Where to Get Help</h2><span class="underline"></span><p class="sub">Pick the right channel for your booking.</p></div><div class="panel reveal" style="margin:30px 0 0"><div class="table-wrap"><table class="tbl"><thead><tr><th>For</th><th>Contact</th><th>Use it for</th></tr></thead><tbody><tr><td><b>Train</b></td><td>Railway helpline 139</td><td>Train enquiries, running status and on-board emergencies</td></tr><tr><td><b>Bus</b></td><td>Operator number on your ticket</td><td>Boarding point, delays and bus location</td></tr><tr><td><b>Flight</b></td><td>Airline helpline in your confirmation email</td><td>Baggage, name correction and rescheduling</td></tr><tr><td><b>Any booking</b></td><td>Contact form on this page</td><td>Refund follow-up and payment problems</td></tr></tbody></table></div></div></div></section>
 <!--more-->
 <section class="bg-soft"><div class="container"><div class="center reveal"><h2 class="title">Cancellation &amp; Refund Charges</h2><span class="underline"></span><p class="sub">Charges depend on how early you cancel.</p></div><div class="panel reveal" style="margin:30px 0 0"><div class="table-wrap"><table class="tbl"><thead><tr><th>Time before departure</th><th>Confirmed ticket</th><th>Waitlisted ticket</th></tr></thead><tbody><tr><td><b>48 hours or more</b></td><td>Flat deduction per class</td><td>Full refund (minus clerkage)</td></tr><tr><td><b>12 to 48 hours</b></td><td>25% of fare</td><td>Full refund (minus clerkage)</td></tr><tr><td><b>4 to 12 hours</b></td><td>50% of fare</td><td>Full refund (minus clerkage)</td></tr><tr><td><b>Less than 4 hours</b></td><td>No refund</td><td>Auto-cancelled and refunded</td></tr></tbody></table></div></div></div></section>
 <!--more-->

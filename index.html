@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>IxigoTrains.in – Book Train Tickets Fast, Easy & Secure</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<title>IxigoTrains.in – Book Train, Bus & Flight Tickets</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -11,68 +12,69 @@
 <div id="site-header"></div>
 
 <section class="hero" style="padding-bottom:0">
+  <div class="hero-slides" aria-hidden="true"><div class="slide active" style="background-image:url('images/train1.jpg')"></div><div class="slide" style="background-image:url('images/bus1.jpg')"></div><div class="slide" style="background-image:url('images/flight1.jpg')"></div><div class="slide" style="background-image:url('images/train4.jpg')"></div><div class="slide" style="background-image:url('images/bus2.jpg')"></div><div class="slide" style="background-image:url('images/flight2.jpg')"></div><div class="slide" style="background-image:url('images/train2.jpg')"></div><div class="slide" style="background-image:url('images/bus4.jpg')"></div><div class="slide" style="background-image:url('images/flight4.jpg')"></div></div>
   <div class="container">
+    <div class="mode-pick reveal">
+      <a class="mp" href="train.html"><i class="fa-solid fa-train-subway"></i><b>Train</b><small>Reserved tickets</small></a>
+      <a class="mp" href="bus.html"><i class="fa-solid fa-bus"></i><b>Bus</b><small>Intercity buses</small></a>
+      <a class="mp" href="flight.html"><i class="fa-solid fa-plane"></i><b>Flight</b><small>Domestic flights</small></a>
+    </div>
     <div class="hero-inner">
       <div class="reveal left">
-        <span class="badge"><i class="fa-solid fa-shield-halved"></i> India's Trusted Train Booking Platform</span>
-        <h1>Book Train Tickets<br><span>Fast, Easy</span> &amp; Secure</h1>
-        <p>Search trains, check availability, book tickets and track your journey — all in one place, for every passenger.</p>
+        <span class="badge"><i class="fa-solid fa-shield-halved"></i> India's Trusted Travel Booking Platform</span>
+        <h1>Book <span>Train, Bus &amp; Flight</span><br>Tickets Fast &amp; Easy</h1>
+        <p>Search trains, buses and flights, compare fares, book tickets and track your journey — all in one place, for every passenger.</p>
         <div class="hero-actions">
           <a href="#book" class="btn"><i class="fa-solid fa-ticket"></i> Book Now</a>
           <a href="live.html" class="btn white"><i class="fa-solid fa-location-crosshairs"></i> Track Train</a>
         </div>
       </div>
       <div class="hero-stats">
-        <div class="glass"><i class="fa-solid fa-users"></i><div><b>2 Crore+</b><small>Happy passengers</small></div></div>
-        <div class="glass"><i class="fa-solid fa-train"></i><div><b>12,000+</b><small>Trains covered</small></div></div>
-        <div class="glass"><i class="fa-solid fa-star"></i><div><b>4.8 / 5</b><small>Average rating</small></div></div>
+        <div class="glass"><i class="fa-solid fa-calendar-check"></i><div><b>60 days</b><small>Advance train booking</small></div></div>
+        <div class="glass"><i class="fa-solid fa-route"></i><div><b>Train · Bus · Flight</b><small>One place for every journey</small></div></div>
+        <div class="glass"><i class="fa-solid fa-bolt"></i><div><b>Tatkal</b><small>Opens 1 day before travel</small></div></div>
       </div>
     </div>
 
     <div class="search-card reveal zoom" id="book">
-      <div class="tabs">
-        <button class="tab active"><i class="fa-solid fa-train-subway"></i> Book Train Tickets</button>
-        <button class="tab" data-href="pnr.html"><i class="fa-regular fa-circle-dot"></i> PNR Status</button>
-        <button class="tab" data-href="schedule.html"><i class="fa-regular fa-clock"></i> Train Schedule</button>
-        <button class="tab" data-href="live.html"><i class="fa-solid fa-location-crosshairs"></i> Live Status</button>
+      <div class="tab-panel active" id="panel-train">
+        <form class="search-row" id="bookForm">
+          <div class="field"><i class="fa-solid fa-location-dot"></i><div><label>From</label><input id="from" placeholder="Origin Station" list="stations"></div></div>
+          <button type="button" class="swap" id="swap" aria-label="Swap"><i class="fa-solid fa-right-left"></i></button>
+          <div class="field"><i class="fa-solid fa-location-dot"></i><div><label>To</label><input id="to" placeholder="Destination Station" list="stations"></div></div>
+          <div class="field"><i class="fa-regular fa-calendar-days"></i><div><label>Journey Date</label><input id="date" type="date"></div></div>
+          <div class="field small"><i class="fa-solid fa-chair"></i><div><label>Class</label>
+            <select id="cls"><option>All Classes</option><option>SL</option><option>3A</option><option>2A</option><option>1A</option><option>CC</option></select></div></div>
+          <button class="search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Search Trains</button>
+        </form>
+        <div class="quick-links"><a href="pnr.html"><i class="fa-regular fa-circle-dot"></i> PNR Status</a><a href="schedule.html"><i class="fa-regular fa-clock"></i> Train Schedule</a><a href="live.html"><i class="fa-solid fa-location-crosshairs"></i> Live Status</a></div>
       </div>
-      <form class="search-row" id="bookForm">
-        <div class="field"><i class="fa-solid fa-location-dot"></i><div><label>From</label><input id="from" placeholder="Origin Station" list="stations"></div></div>
-        <button type="button" class="swap" id="swap" aria-label="Swap"><i class="fa-solid fa-right-left"></i></button>
-        <div class="field"><i class="fa-solid fa-location-dot"></i><div><label>To</label><input id="to" placeholder="Destination Station" list="stations"></div></div>
-        <div class="field"><i class="fa-regular fa-calendar-days"></i><div><label>Journey Date</label><input id="date" type="date"></div></div>
-        <div class="field small"><div><label>Class</label>
-          <select id="cls"><option>All Classes</option><option>SL</option><option>3A</option><option>2A</option><option>1A</option><option>CC</option></select></div></div>
-        <button class="search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Search Trains</button>
-      </form>
     </div>
   </div>
   <div class="rail"><i class="fa-solid fa-train"></i></div>
 </section>
 
-<section class="features">
-  <div class="container feat-grid">
-    <div class="feat reveal"><span class="ico yellow"><i class="fa-solid fa-bolt"></i></span><div><b>Instant Booking</b><small>Quick &amp; hassle-free</small></div></div>
-    <div class="feat reveal d1"><span class="ico green"><i class="fa-solid fa-shield-halved"></i></span><div><b>Safe &amp; Secure</b><small>100% secure payments</small></div></div>
-    <div class="feat reveal d2"><span class="ico orange"><i class="fa-solid fa-headset"></i></span><div><b>24×7 Support</b><small>Always here to help</small></div></div>
-    <div class="feat reveal d3"><span class="ico bluei"><i class="fa-solid fa-percent"></i></span><div><b>Exciting Offers</b><small>Save more on every booking</small></div></div>
-  </div>
-</section>
+
 
 <section class="stats">
   <div class="container stat-grid">
-    <div class="stat"><b data-count="20000000" data-suffix="+">0</b><span>Happy Passengers</span></div>
-    <div class="stat"><b data-count="12000" data-suffix="+">0</b><span>Trains Covered</span></div>
-    <div class="stat"><b data-count="7500" data-suffix="+">0</b><span>Railway Stations</span></div>
-    <div class="stat"><b data-count="99" data-suffix="%">0</b><span>Successful Bookings</span></div>
+    <div class="stat"><b data-count="60">0</b><span>Days ahead you can book a train</span></div>
+    <div class="stat"><b data-count="10">0</b><span>Digits in a train PNR number</span></div>
+    <div class="stat"><b data-count="4" data-suffix=" hrs">0</b><span>Before departure the first chart is made</span></div>
+    <div class="stat"><b data-count="139">0</b><span>Railway helpline number</span></div>
   </div>
 </section>
 
+<section class="bg-soft"><div class="container"><div class="center reveal"><h2 class="title">Travel Your Way</h2><span class="underline"></span><p class="sub">Train, bus or flight — book every journey in one place.</p></div><div class="mode-grid">
+<div class="mode reveal"><div class="m-img" style="background-image:url('images/train1.jpg')"><i class="fa-solid fa-train"></i></div><div class="m-body"><h4>Train Tickets</h4><p>Reserved train tickets across India.</p><ul><li><i class="fa-solid fa-circle-check"></i> PNR status &amp; live running status</li><li><i class="fa-solid fa-circle-check"></i> Tatkal and general quota</li><li><i class="fa-solid fa-circle-check"></i> SL, 3A, 2A, 1A, CC and EC classes</li></ul><a class="btn" href="train.html">Find Trains <i class="fa-solid fa-arrow-right"></i></a></div></div>
+<div class="mode reveal"><div class="m-img" style="background-image:url('images/bus1.jpg')"><i class="fa-solid fa-bus"></i></div><div class="m-body"><h4>Bus Tickets</h4><p>Intercity buses from state and private operators.</p><ul><li><i class="fa-solid fa-circle-check"></i> AC Sleeper, Seater and Volvo buses</li><li><i class="fa-solid fa-circle-check"></i> Select your seat and boarding point</li><li><i class="fa-solid fa-circle-check"></i> Operator ratings and reviews</li></ul><a class="btn" href="bus.html">Find Buses <i class="fa-solid fa-arrow-right"></i></a></div></div>
+<div class="mode reveal"><div class="m-img" style="background-image:url('images/flight1.jpg')"><i class="fa-solid fa-plane"></i></div><div class="m-body"><h4>Flight Tickets</h4><p>Domestic flights from major airlines.</p><ul><li><i class="fa-solid fa-circle-check"></i> Compare airlines and timings</li><li><i class="fa-solid fa-circle-check"></i> Economy, Premium and Business</li><li><i class="fa-solid fa-circle-check"></i> Web check-in and flight alerts</li></ul><a class="btn" href="flight.html">Find Flights <i class="fa-solid fa-arrow-right"></i></a></div></div>
+</div></div></section>
 <section>
   <div class="container">
     <div class="center reveal">
       <h2 class="title">Popular Train Routes</h2><span class="underline"></span>
-      <p class="sub">Most travelled routes by our passengers. Click a route to fill the search form instantly.</p>
+      <p class="sub">Popular routes. Click a route to fill the search form. Fares and durations shown are samples.</p>
     </div>
     <div class="route-grid">
       <article class="route reveal d1" data-from="New Delhi (NDLS)" data-to="Lucknow (LKO)">
@@ -103,20 +105,7 @@
   </div>
 </section>
 
-<section class="bg-soft">
-  <div class="container">
-    <div class="center reveal">
-      <h2 class="title">More Than Just Train Booking</h2><span class="underline"></span>
-      <p class="sub">Everything you need for a smooth and smart train travel experience.</p>
-    </div>
-    <div class="svc-grid">
-      <a href="pnr.html" class="card reveal d1"><i class="fa-solid fa-ticket big"></i><h4>PNR Status</h4><p>Check your ticket status instantly with your 10 digit PNR.</p></a>
-      <a href="schedule.html" class="card reveal d2"><i class="fa-regular fa-calendar-days big"></i><h4>Train Schedule</h4><p>Find trains between stations and view full timetables.</p></a>
-      <a href="live.html" class="card reveal d3"><i class="fa-solid fa-location-dot big"></i><h4>Live Train Status</h4><p>Track your train in real-time with delay information.</p></a>
-      <a href="schedule.html" class="card reveal d4"><i class="fa-regular fa-bell big"></i><h4>Seat Availability</h4><p>Check live seat availability across all classes.</p></a>
-    </div>
-  </div>
-</section>
+
 
 <section>
   <div class="container">
@@ -142,29 +131,14 @@
         <li><i class="fa-solid fa-circle-check"></i> Senior citizen &amp; ladies quota support</li>
         <li><i class="fa-solid fa-circle-check"></i> Multiple passengers in a single booking</li>
         <li><i class="fa-solid fa-circle-check"></i> Easy cancellation with refunds as per railway rules</li>
-        <li><i class="fa-solid fa-circle-check"></i> Instant refunds to your original payment mode</li>
+        <li><i class="fa-solid fa-circle-check"></i> Refunds go to your original payment mode</li>
       </ul>
       <a href="support.html" class="btn">Know More <i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="container">
-    <div class="center reveal">
-      <h2 class="title">Choose Your Travel Class</h2><span class="underline"></span>
-      <p class="sub">Pick the comfort level that suits your journey and budget.</p>
-    </div>
-    <div class="cls-grid">
-      <div class="cls reveal d1"><b>Sleeper (SL)</b><span>Budget</span><p>Non-AC berths, best for budget travel on long routes.</p></div>
-      <div class="cls reveal d2"><b>AC 3 Tier (3A)</b><span>Popular</span><p>Air-conditioned coach with 3 berths per bay and bedding.</p></div>
-      <div class="cls reveal d3"><b>AC 2 Tier (2A)</b><span>Comfort</span><p>More space, curtains and reading lights for overnight trips.</p></div>
-      <div class="cls reveal d1"><b>AC First (1A)</b><span>Premium</span><p>Private cabins with maximum comfort and privacy.</p></div>
-      <div class="cls reveal d2"><b>Chair Car (CC)</b><span>Day trips</span><p>Comfortable reclining seats for daytime journeys.</p></div>
-      <div class="cls reveal d3"><b>Exec. Chair (EC)</b><span>Premium</span><p>Wide seats on Vande Bharat &amp; Shatabdi express trains.</p></div>
-    </div>
-  </div>
-</section>
+
 
 <section class="bg-soft">
   <div class="container">
@@ -181,18 +155,7 @@
   </div>
 </section>
 
-<section>
-  <div class="container">
-    <div class="center reveal">
-      <h2 class="title">What Passengers Say</h2><span class="underline"></span>
-    </div>
-    <div class="testi-grid">
-      <div class="testi reveal d1"><div class="stars">★★★★★</div><p>“Booked my Delhi–Lucknow ticket in under two minutes. The live status feature saved me a long wait at the station.”</p><div class="who"><div class="av">R</div><div><b>Rohit Sharma</b><br><small>Delhi</small></div></div></div>
-      <div class="testi reveal d2"><div class="stars">★★★★★</div><p>“PNR status updates are quick and the interface is very clean. Booked for my parents without any trouble.”</p><div class="who"><div class="av">P</div><div><b>Priya Verma</b><br><small>Mumbai</small></div></div></div>
-      <div class="testi reveal d3"><div class="stars">★★★★☆</div><p>“Great offers and helpful support team. Got my refund processed the same day.”</p><div class="who"><div class="av">A</div><div><b>Amit Singh</b><br><small>Varanasi</small></div></div></div>
-    </div>
-  </div>
-</section>
+
 
 <section class="bg-soft">
   <div class="container">
@@ -201,44 +164,24 @@
       <div class="faq-item"><button class="faq-q">How do I book a train ticket? <i class="fa-solid fa-plus"></i></button><div class="faq-a">Enter your origin, destination and date in the search box, choose a train and class, add passenger details and pay securely.</div></div>
       <div class="faq-item"><button class="faq-q">How can I check my PNR status? <i class="fa-solid fa-plus"></i></button><div class="faq-a">Open the PNR Status page, enter your 10 digit PNR number and tap Check PNR.</div></div>
       <div class="faq-item"><button class="faq-q">How do refunds work? <i class="fa-solid fa-plus"></i></button><div class="faq-a">Refunds for cancelled or waitlisted tickets are sent back to your original payment mode as per railway rules.</div></div>
-      <div class="faq-item"><button class="faq-q">Is my payment secure? <i class="fa-solid fa-plus"></i></button><div class="faq-a">Yes. All payments are processed through encrypted, secure payment gateways.</div></div>
+      <div class="faq-item"><button class="faq-q">Can I book buses and flights too? <i class="fa-solid fa-plus"></i></button><div class="faq-a">Yes. Use the Train, Bus and Flight buttons at the top of the page to search each mode.</div></div>
     </div>
   </div>
 </section>
 
 <!--more-->
-<section class="bg-soft"><div class="container"><div class="center reveal"><h2 class="title">Why Choose IxigoTrains.in</h2><span class="underline"></span><p class="sub">Everything you need to plan, book and track your train journey.</p></div><div class="svc-grid"><div class="card reveal d1"><i class="fa-solid fa-magnifying-glass-chart big"></i><h4>Smart Search</h4><p>Compare trains, timings, duration and fares side by side.</p></div><div class="card reveal d2"><i class="fa-solid fa-bolt-lightning big"></i><h4>Fast Checkout</h4><p>Book in under two minutes with saved passenger details.</p></div><div class="card reveal d3"><i class="fa-solid fa-lock big"></i><h4>Secure Payments</h4><p>Encrypted payments via UPI, cards, net banking and wallets.</p></div><div class="card reveal d4"><i class="fa-solid fa-rotate-left big"></i><h4>Easy Cancellation</h4><p>Cancel anytime and get refunds as per railway rules.</p></div><div class="card reveal d1"><i class="fa-solid fa-bell big"></i><h4>Smart Alerts</h4><p>Get PNR, platform and delay alerts for your journey.</p></div><div class="card reveal d2"><i class="fa-solid fa-headset big"></i><h4>24×7 Help</h4><p>Chat and help center support whenever you need it.</p></div><div class="card reveal d3"><i class="fa-solid fa-people-group big"></i><h4>Group Booking</h4><p>Add up to 6 passengers in a single booking.</p></div><div class="card reveal d4"><i class="fa-solid fa-wheelchair-move big"></i><h4>Accessible Travel</h4><p>Divyang, senior citizen and ladies quota options.</p></div></div></div></section>
+
 <!--more-->
-<section><div class="container"><div class="center reveal"><h2 class="title">Booking Quotas Explained</h2><span class="underline"></span><p class="sub">Choose the quota that suits your travel plan.</p></div><div class="panel reveal" style="margin:30px 0 0"><div class="table-wrap"><table class="tbl"><thead><tr><th>Quota</th><th>Who it is for</th><th>Booking opens</th><th>Notes</th></tr></thead><tbody><tr><td><b>General (GN)</b></td><td>All passengers</td><td>60 days before</td><td>Standard fares apply</td></tr><tr><td><b>Tatkal (TQ)</b></td><td>Last-minute travel</td><td>1 day before, 10 AM (AC) / 11 AM (SL)</td><td>Extra charges, limited refund</td></tr><tr><td><b>Premium Tatkal</b></td><td>Last-minute, dynamic fare</td><td>1 day before</td><td>Fare changes with demand</td></tr><tr><td><b>Ladies (LD)</b></td><td>Women travelling alone / with children</td><td>60 days before</td><td>Limited seats per train</td></tr><tr><td><b>Senior Citizen (SS)</b></td><td>Men 60+, women 58+</td><td>60 days before</td><td>Lower berth preferred</td></tr><tr><td><b>Divyang (HP)</b></td><td>Passengers with disabilities</td><td>60 days before</td><td>Concession available</td></tr></tbody></table></div></div></div></section>
+
 <!--more-->
-<section class="bg-soft"><div class="container"><div class="center reveal"><h2 class="title">Travel Tips for a Smooth Journey</h2><span class="underline"></span></div><div class="svc-grid"><div class="card reveal d1"><i class="fa-solid fa-id-card big"></i><h4>Carry Valid ID</h4><p>Keep one original photo ID such as Aadhaar, passport or driving licence.</p></div><div class="card reveal d2"><i class="fa-solid fa-clock big"></i><h4>Reach Early</h4><p>Arrive at least 30 minutes before departure to find your platform.</p></div><div class="card reveal d3"><i class="fa-solid fa-suitcase-rolling big"></i><h4>Pack Smart</h4><p>Free luggage limit is 40 kg in SL and up to 70 kg in 1A.</p></div><div class="card reveal d4"><i class="fa-solid fa-utensils big"></i><h4>Pre-order Meals</h4><p>Pre-book meals on long routes to avoid station rush.</p></div><div class="card reveal d1"><i class="fa-solid fa-mobile-screen big"></i><h4>Keep PNR Handy</h4><p>Save your PNR in the app to check chart status quickly.</p></div><div class="card reveal d2"><i class="fa-solid fa-shield-heart big"></i><h4>Stay Safe</h4><p>Keep valuables close and note emergency helpline 139.</p></div></div></div></section>
+<section class="bg-soft"><div class="container"><div class="center reveal"><h2 class="title">Travel Tips for a Smooth Journey</h2><span class="underline"></span></div><div class="svc-grid"><div class="card reveal d1"><i class="fa-solid fa-id-card big"></i><h4>Carry Valid ID</h4><p>Keep one original photo ID such as Aadhaar, passport or driving licence.</p></div><div class="card reveal d2"><i class="fa-solid fa-clock big"></i><h4>Reach Early</h4><p>Arrive at least 30 minutes before departure to find your platform.</p></div><div class="card reveal d3"><i class="fa-solid fa-suitcase-rolling big"></i><h4>Pack Smart</h4><p>Free luggage limit is 40 kg in SL and 3A, 50 kg in 2A and 70 kg in 1A.</p></div><div class="card reveal d4"><i class="fa-solid fa-utensils big"></i><h4>Pre-order Meals</h4><p>Pre-book meals on long routes to avoid station rush.</p></div><div class="card reveal d1"><i class="fa-solid fa-mobile-screen big"></i><h4>Keep PNR Handy</h4><p>Note your PNR from the e-ticket to check chart status quickly.</p></div><div class="card reveal d2"><i class="fa-solid fa-shield-heart big"></i><h4>Stay Safe</h4><p>Keep valuables close and note emergency helpline 139.</p></div></div></div></section>
 <!--more-->
-<section><div class="container"><div class="center reveal"><h2 class="title">Popular Trains in India</h2><span class="underline"></span><p class="sub">Fast, comfortable and widely loved services.</p></div><div class="panel reveal" style="margin:30px 0 0"><div class="table-wrap"><table class="tbl"><thead><tr><th>Train type</th><th>Famous route</th><th>Classes</th><th>Best for</th></tr></thead><tbody><tr><td><b>Vande Bharat</b></td><td>New Delhi – Varanasi</td><td>CC, EC</td><td>Day journeys, premium comfort</td></tr><tr><td><b>Rajdhani</b></td><td>New Delhi – Mumbai Central</td><td>1A, 2A, 3A</td><td>Overnight travel from Delhi</td></tr><tr><td><b>Shatabdi</b></td><td>New Delhi – Bhopal</td><td>CC, EC</td><td>Same-day intercity trips</td></tr><tr><td><b>Duronto</b></td><td>Sealdah – New Delhi</td><td>1A to SL</td><td>Non-stop long distance</td></tr><tr><td><b>Garib Rath</b></td><td>Saharsa – Amritsar</td><td>3A (budget)</td><td>Affordable AC travel</td></tr><tr><td><b>Superfast / Mail</b></td><td>Howrah – New Delhi (Poorva)</td><td>All classes</td><td>Everyday long routes</td></tr></tbody></table></div></div></div></section>
+
 <!--more-->
 <section class="bg-soft"><div class="container"><div class="center reveal"><h2 class="title">More Questions Answered</h2><span class="underline"></span></div><div class="faq reveal"><div class="faq-item"><button class="faq-q">Up to how many days in advance can I book? <i class="fa-solid fa-plus"></i></button><div class="faq-a">Advance reservation opens 60 days before the journey date, excluding the date of travel.</div></div><div class="faq-item"><button class="faq-q">What is a Tatkal ticket? <i class="fa-solid fa-plus"></i></button><div class="faq-a">Tatkal is a last-minute quota that opens one day before the journey at an additional charge.</div></div><div class="faq-item"><button class="faq-q">Can children travel free? <i class="fa-solid fa-plus"></i></button><div class="faq-a">Children under 5 travel free without a berth. Children aged 5–11 can be booked half fare with or without a berth.</div></div><div class="faq-item"><button class="faq-q">What if my train is cancelled? <i class="fa-solid fa-plus"></i></button><div class="faq-a">Fully cancelled trains are refunded automatically to your original payment mode.</div></div><div class="faq-item"><button class="faq-q">How do I get my e-ticket? <i class="fa-solid fa-plus"></i></button><div class="faq-a">Your e-ticket is available instantly after booking, with a copy sent by SMS and email.</div></div></div></div></section>
-<section class="app">
-  <div class="container app-grid">
-    <div class="phones reveal left">
-      <div class="phone p1"><div class="screen blue"><i class="fa-solid fa-train"></i><span>Ixigo<b>Trains</b>.in</span></div></div>
-      <div class="phone p2"><div class="screen white"><div class="mini-img"></div><h6>Book Train Tickets</h6>
-        <div class="mini">From<br><b>New Delhi (NDLS)</b></div><div class="mini">To<br><b>Mumbai Central (BCT)</b></div>
-        <div class="mini">Journey Date<br><b>12 Nov, 2026</b></div><div class="mini-btn">Search Trains</div></div></div>
-    </div>
-    <div class="reveal right">
-      <h2 class="title">Book on the Go!</h2><span class="underline"></span>
-      <p>Download the IxigoTrains.in App for a faster, smarter and more convenient booking experience.</p>
-</div>
-  </div>
-</section>
 
-<section style="padding:60px 0">
-  <div class="container">
-    <div class="cta reveal zoom">
-      <div><h3>Get travel deals in your inbox</h3><p>Subscribe for exclusive offers and train alerts.</p></div>
-      <form class="news" id="newsForm"><input type="email" required placeholder="Enter your email"><button class="btn" type="submit">Subscribe</button></form>
-    </div>
-  </div>
-</section>
+
+
 
 <div id="site-footer"></div>
 <script src="script.js"></script>

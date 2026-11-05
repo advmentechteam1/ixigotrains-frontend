@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <title>Live Train Status – IxigoTrains.in</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="style.css">
@@ -24,7 +25,7 @@
       <div class="dot" style="left:75%"><span>Surat</span></div>
       <div class="dot" style="left:100%"><span>Mumbai</span></div>
     </div>
-    <div class="chips" style="justify-content:center;margin-top:30px"><span><i class="fa-solid fa-satellite-dish"></i>Live location</span><span><i class="fa-solid fa-stopwatch"></i>Delay info</span><span><i class="fa-solid fa-bell"></i>Arrival alerts</span></div>
+    <div class="chips" style="justify-content:center;margin-top:30px"><span><i class="fa-solid fa-satellite-dish"></i>Live location</span><span><i class="fa-solid fa-stopwatch"></i>Delay info</span><span><i class="fa-solid fa-train"></i>Platform info</span></div>
   </div>
 </section>
 
@@ -40,6 +41,13 @@
     <div id="liveResult"></div>
   </div>
 </section>
+<!--modes-->
+<section class="bg-soft"><div class="container"><div class="center reveal"><h2 class="title">Live Bus &amp; Flight Status</h2><span class="underline"></span><p class="sub">Track every journey in real time.</p></div><div class="mode-grid" style="grid-template-columns:1fr 1fr"><div class="mode reveal"><div class="m-img" style="background-image:url('images/bus2.jpg')"><i class="fa-solid fa-bus"></i></div><div class="m-body"><h4>Track Your Bus</h4><p>Enter your ticket number to see the bus location.</p><form class="form" id="busLiveForm"><input id="busLiveTkt" placeholder="Ticket number or bus number"><button class="btn" type="submit" style="justify-self:start">Track Bus</button></form><div id="busLiveRes" style="margin-top:14px"></div></div></div><div class="mode reveal"><div class="m-img" style="background-image:url('images/flight3.jpg')"><i class="fa-solid fa-plane-departure"></i></div><div class="m-body"><h4>Flight Status</h4><p>Enter flight number to see departure, arrival and gate.</p><form class="form" id="flightLiveForm"><input id="flLiveNo" placeholder="Flight number (e.g. 6E 2174)"><button class="btn" type="submit" style="justify-self:start">Check Flight</button></form><div id="flightLiveRes" style="margin-top:14px"></div></div></div></div></div></section>
+<section><div class="container"><div class="center reveal"><h2 class="title">Why Track Bus &amp; Flights Live?</h2><span class="underline"></span></div><div class="svc-grid"><div class="card reveal d1"><i class="fa-solid fa-location-dot big"></i><h4>Bus Location</h4><p>See which city or highway stop your bus has crossed.</p></div><div class="card reveal d2"><i class="fa-solid fa-clock big"></i><h4>Delay Info</h4><p>Know if your bus or flight is running late before leaving home.</p></div><div class="card reveal d3"><i class="fa-solid fa-door-open big"></i><h4>Gate &amp; Terminal</h4><p>Get terminal and gate details for your flight.</p></div><div class="card reveal d4"><i class="fa-solid fa-people-arrows big"></i><h4>Easy Pick-up</h4><p>Plan pick-ups using accurate arrival time.</p></div></div></div></section>
+<section><div class="container split"><img class="photo reveal left" src="images/bus1.jpg" alt="Intercity bus" loading="lazy"><div class="reveal right"><h2 class="title" style="text-align:left">Live Bus Tracking</h2><span class="underline" style="margin-left:0"></span><p class="sub" style="text-align:left;margin-left:0">Most operators share GPS location every few minutes.</p><ul class="checks" style="margin-left:0"><li><i class="fa-solid fa-circle-check"></i> Last crossed stop and next stop</li><li><i class="fa-solid fa-circle-check"></i> Estimated arrival at your drop point</li><li><i class="fa-solid fa-circle-check"></i> Driver and operator contact number</li><li><i class="fa-solid fa-circle-check"></i> Operator helpline for your trip</li></ul><a href="bus.html" class="btn">Book a Bus <i class="fa-solid fa-arrow-right"></i></a></div></div></section>
+<section><div class="container split"><img class="photo reveal left" src="images/flight1.jpg" alt="Air India aircraft" loading="lazy"><div class="reveal right"><h2 class="title" style="text-align:left">Live Flight Status</h2><span class="underline" style="margin-left:0"></span><p class="sub" style="text-align:left;margin-left:0">Real-time departure and arrival updates for domestic flights.</p><ul class="checks" style="margin-left:0"><li><i class="fa-solid fa-circle-check"></i> On time, delayed, departed or landed status</li><li><i class="fa-solid fa-circle-check"></i> Terminal, gate and baggage belt</li><li><i class="fa-solid fa-circle-check"></i> Revised departure and arrival time</li><li><i class="fa-solid fa-circle-check"></i> Gate number shown before boarding</li></ul><a href="flight.html" class="btn">Book a Flight <i class="fa-solid fa-arrow-right"></i></a></div></div></section>
+<section class="bg-soft"><div class="container"><div class="center reveal"><h2 class="title">Bus &amp; Flight Status Glossary</h2><span class="underline"></span><p class="sub">Terms you will see while tracking.</p></div><div class="panel reveal" style="margin:30px 0 0"><div class="table-wrap"><table class="tbl"><thead><tr><th>Term</th><th>Mode</th><th>Meaning</th></tr></thead><tbody><tr><td><b>Boarding point</b></td><td>Bus</td><td>Place where you board the bus</td></tr><tr><td><b>Drop point</b></td><td>Bus</td><td>Stop where you get off</td></tr><tr><td><b>En route</b></td><td>Bus</td><td>The bus has started and is on the way</td></tr><tr><td><b>Scheduled / On time</b></td><td>Flight</td><td>Flight is expected as per the original timetable</td></tr><tr><td><b>Delayed</b></td><td>Flight</td><td>Departure or arrival is later than scheduled</td></tr><tr><td><b>Boarding</b></td><td>Flight</td><td>Gate is open, passengers are boarding</td></tr><tr><td><b>Departed / Landed</b></td><td>Flight</td><td>Flight has left or reached its destination</td></tr></tbody></table></div></div></div></section>
+
 
 <section class="bg-soft">
   <div class="container">
@@ -47,7 +55,7 @@
     <div class="svc-grid">
       <div class="card reveal d1"><i class="fa-solid fa-satellite-dish big"></i><h4>Real-time Location</h4><p>See the last station crossed and the next upcoming stop.</p></div>
       <div class="card reveal d2"><i class="fa-solid fa-stopwatch big"></i><h4>Delay Info</h4><p>Know how many minutes late the train is running.</p></div>
-      <div class="card reveal d3"><i class="fa-solid fa-bell big"></i><h4>Platform Alerts</h4><p>Get alerts before your train arrives at your station.</p></div>
+      <div class="card reveal d3"><i class="fa-solid fa-bell big"></i><h4>Platform Info</h4><p>See the platform your train is expected on.</p></div>
       <div class="card reveal d4"><i class="fa-solid fa-people-arrows big"></i><h4>Pick-up Easy</h4><p>Plan pick-ups for family and friends without waiting.</p></div>
     </div>
   </div>
@@ -77,7 +85,7 @@
 <!--more-->
 <section class="bg-soft"><div class="container"><div class="center reveal"><h2 class="title">Live Status Glossary</h2><span class="underline"></span><p class="sub">Terms you will see while tracking.</p></div><div class="panel reveal" style="margin:30px 0 0"><div class="table-wrap"><table class="tbl"><thead><tr><th>Term</th><th>Meaning</th></tr></thead><tbody><tr><td><b>ETA</b></td><td>Expected time of arrival at a station</td></tr><tr><td><b>ETD</b></td><td>Expected time of departure from a station</td></tr><tr><td><b>Delay</b></td><td>Minutes the train is behind its scheduled time</td></tr><tr><td><b>Halt</b></td><td>Time the train stops at a station</td></tr><tr><td><b>Platform</b></td><td>Platform number the train is expected on</td></tr><tr><td><b>Distance</b></td><td>Kilometres covered from the starting station</td></tr></tbody></table></div></div></div></section>
 <!--more-->
-<section><div class="container"><div class="center reveal"><h2 class="title">Tips for Pick-up &amp; Drop</h2><span class="underline"></span></div><div class="svc-grid"><div class="card reveal d1"><i class="fa-solid fa-person-walking-luggage big"></i><h4>Reach on Time</h4><p>Track ETA and leave home when the train is 1 hour away.</p></div><div class="card reveal d2"><i class="fa-solid fa-car big"></i><h4>Plan Pick-up</h4><p>Share live status with family so they can arrive on time.</p></div><div class="card reveal d3"><i class="fa-solid fa-cloud-rain big"></i><h4>Weather Delays</h4><p>Fog and monsoon can delay trains; check status often.</p></div><div class="card reveal d4"><i class="fa-solid fa-bell big"></i><h4>Set Alerts</h4><p>Get alerts when your train is near your station.</p></div></div></div></section>
+<section><div class="container"><div class="center reveal"><h2 class="title">Tips for Pick-up &amp; Drop</h2><span class="underline"></span></div><div class="svc-grid"><div class="card reveal d1"><i class="fa-solid fa-person-walking-luggage big"></i><h4>Reach on Time</h4><p>Track ETA and leave home when the train is 1 hour away.</p></div><div class="card reveal d2"><i class="fa-solid fa-car big"></i><h4>Plan Pick-up</h4><p>Share live status with family so they can arrive on time.</p></div><div class="card reveal d3"><i class="fa-solid fa-cloud-rain big"></i><h4>Weather Delays</h4><p>Fog and monsoon can delay trains; check status often.</p></div><div class="card reveal d4"><i class="fa-solid fa-bell big"></i><h4>Check Again</h4><p>Status updates every few minutes, so check again before you leave.</p></div></div></div></section>
 <div id="site-footer"></div>
 <script src="script.js"></script>
 </body>

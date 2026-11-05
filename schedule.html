@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <title>Train Schedule – IxigoTrains.in</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="style.css">
@@ -17,7 +18,7 @@
       <span class="crumb"><i class="fa-solid fa-house"></i> Home / Train Schedule</span>
       <h1>Find <span>Trains</span> &amp; Full Timetables</h1>
       <p>Search trains between any two stations, compare timings and fares, and see every stop on the route.</p>
-      <div class="mini-stats"><div><b>12,000+</b><span>Trains</span></div><div><b>7,500+</b><span>Stations</span></div><div><b>60 days</b><span>Advance booking</span></div></div>
+      <div class="mini-stats"><div><b>60 days</b><span>Advance booking</span></div><div><b>10 digits</b><span>PNR number</span></div><div><b>139</b><span>Railway helpline</span></div></div>
     </div>
   </div>
 </section>
@@ -31,7 +32,7 @@
         <button type="button" class="swap" id="swap" aria-label="Swap"><i class="fa-solid fa-right-left"></i></button>
         <div class="field"><i class="fa-solid fa-location-dot"></i><div><label>To</label><input id="to" placeholder="Destination Station" list="stations"></div></div>
         <div class="field"><i class="fa-regular fa-calendar-days"></i><div><label>Journey Date</label><input id="date" type="date"></div></div>
-        <div class="field small"><div><label>Class</label><select id="cls"><option>All Classes</option><option>SL</option><option>3A</option><option>2A</option><option>1A</option><option>CC</option></select></div></div>
+        <div class="field small"><i class="fa-solid fa-chair"></i><div><label>Class</label><select id="cls"><option>All Classes</option><option>SL</option><option>3A</option><option>2A</option><option>1A</option><option>CC</option></select></div></div>
         <button class="search-btn" type="submit">Find Trains</button>
       </form>
     </div>
@@ -47,6 +48,12 @@
     <div id="stopList"></div>
   </div>
 </section>
+<!--modes-->
+<section><div class="container split"><img class="photo reveal left" src="images/bus1.jpg" alt="Volvo bus" loading="lazy"><div class="reveal right"><h2 class="title" style="text-align:left">Bus Schedule</h2><span class="underline" style="margin-left:0"></span><p class="sub" style="text-align:left;margin-left:0">Popular intercity buses with departure and arrival times.</p><ul class="checks" style="margin-left:0"><li><i class="fa-solid fa-circle-check"></i> Several departures through the day on busy routes</li><li><i class="fa-solid fa-circle-check"></i> AC Sleeper, Seater and Volvo coaches</li><li><i class="fa-solid fa-circle-check"></i> Choose boarding and drop points</li><li><i class="fa-solid fa-circle-check"></i> Book seats up to 30 days ahead</li></ul><a href="bus.html" class="btn">Search Buses <i class="fa-solid fa-arrow-right"></i></a></div></div></section>
+<section class="bg-soft"><div class="container"><div class="center reveal"><h2 class="title">Popular Bus Timetable</h2><span class="underline"></span><p class="sub">Sample timings — search for live availability.</p></div><div class="panel reveal" style="margin:30px 0 0"><div class="table-wrap"><table class="tbl"><thead><tr><th>Route</th><th>Operator type</th><th>Departure</th><th>Arrival</th><th>Duration</th><th>Fare from</th></tr></thead><tbody><tr><td><b>Delhi → Jaipur</b></td><td>Volvo AC Seater</td><td>06:30</td><td>12:00</td><td>5h 30m</td><td>₹450</td></tr><tr><td><b>Delhi → Agra</b></td><td>AC Seater</td><td>07:15</td><td>11:15</td><td>4h 00m</td><td>₹350</td></tr><tr><td><b>Mumbai → Pune</b></td><td>Volvo AC</td><td>08:00</td><td>11:30</td><td>3h 30m</td><td>₹350</td></tr><tr><td><b>Hyderabad → Bengaluru</b></td><td>AC Sleeper</td><td>21:30</td><td>07:00</td><td>9h 30m</td><td>₹900</td></tr><tr><td><b>Delhi → Lucknow</b></td><td>AC Sleeper</td><td>22:00</td><td>07:30</td><td>9h 30m</td><td>₹850</td></tr></tbody></table></div></div></div></section>
+<section><div class="container split"><img class="photo reveal left" src="images/flight2.jpg" alt="IndiGo aircraft" loading="lazy"><div class="reveal right"><h2 class="title" style="text-align:left">Flight Schedule</h2><span class="underline" style="margin-left:0"></span><p class="sub" style="text-align:left;margin-left:0">Domestic flights between major Indian cities.</p><ul class="checks" style="margin-left:0"><li><i class="fa-solid fa-circle-check"></i> Morning, afternoon and evening departures</li><li><i class="fa-solid fa-circle-check"></i> Non-stop and one-stop options</li><li><i class="fa-solid fa-circle-check"></i> Economy, Premium and Business fares</li><li><i class="fa-solid fa-circle-check"></i> Web check-in 48 hours before</li></ul><a href="flight.html" class="btn">Search Flights <i class="fa-solid fa-arrow-right"></i></a></div></div></section>
+<section class="bg-soft"><div class="container"><div class="center reveal"><h2 class="title">Popular Flight Timetable</h2><span class="underline"></span><p class="sub">Sample timings — search for live availability.</p></div><div class="panel reveal" style="margin:30px 0 0"><div class="table-wrap"><table class="tbl"><thead><tr><th>Route</th><th>Airline type</th><th>Departure</th><th>Arrival</th><th>Duration</th><th>Fare from</th></tr></thead><tbody><tr><td><b>Delhi → Mumbai</b></td><td>Full-service</td><td>09:30</td><td>11:50</td><td>2h 20m</td><td>₹4,500</td></tr><tr><td><b>Delhi → Bengaluru</b></td><td>Low-cost</td><td>06:10</td><td>08:55</td><td>2h 45m</td><td>₹5,200</td></tr><tr><td><b>Mumbai → Goa</b></td><td>Low-cost</td><td>13:05</td><td>14:15</td><td>1h 10m</td><td>₹3,300</td></tr><tr><td><b>Hyderabad → Delhi</b></td><td>Full-service</td><td>17:40</td><td>20:05</td><td>2h 25m</td><td>₹4,800</td></tr><tr><td><b>Kolkata → Delhi</b></td><td>Low-cost</td><td>07:20</td><td>09:50</td><td>2h 30m</td><td>₹4,600</td></tr></tbody></table></div></div></div></section>
+
 
 <section class="bg-soft">
   <div class="container">
@@ -96,7 +103,7 @@
 <!--more-->
 <section><div class="container"><div class="center reveal"><h2 class="title">Common Station Codes</h2><span class="underline"></span><p class="sub">Handy codes used while searching.</p></div><div class="panel reveal" style="margin:30px 0 0"><div class="table-wrap"><table class="tbl"><thead><tr><th>Station</th><th>Code</th><th>City</th><th>Zone</th></tr></thead><tbody><tr><td><b>New Delhi</b></td><td>NDLS</td><td>Delhi</td><td>Northern</td></tr><tr><td><b>Mumbai Central</b></td><td>BCT</td><td>Mumbai</td><td>Western</td></tr><tr><td><b>Howrah Junction</b></td><td>HWH</td><td>Kolkata</td><td>Eastern</td></tr><tr><td><b>Chennai Central</b></td><td>MAS</td><td>Chennai</td><td>Southern</td></tr><tr><td><b>Bengaluru City</b></td><td>SBC</td><td>Bengaluru</td><td>South Western</td></tr><tr><td><b>Lucknow</b></td><td>LKO</td><td>Lucknow</td><td>Northern</td></tr><tr><td><b>Jaipur</b></td><td>JP</td><td>Jaipur</td><td>North Western</td></tr><tr><td><b>Varanasi</b></td><td>BSB</td><td>Varanasi</td><td>North Eastern</td></tr></tbody></table></div></div></div></section>
 <!--more-->
-<section class="bg-soft"><div class="container"><div class="center reveal"><h2 class="title">Know Before You Go</h2><span class="underline"></span></div><div class="svc-grid"><div class="card reveal d1"><i class="fa-solid fa-weight-hanging big"></i><h4>Luggage Limit</h4><p>Free limit 40 kg in SL, 50 kg in 3A and 70 kg in 1A.</p></div><div class="card reveal d2"><i class="fa-solid fa-child big"></i><h4>Child Fare</h4><p>Under 5 free; 5–11 half fare; 12+ full fare.</p></div><div class="card reveal d3"><i class="fa-solid fa-bed big"></i><h4>Berth Preference</h4><p>Choose lower, middle, upper or side berths while booking.</p></div><div class="card reveal d4"><i class="fa-solid fa-ticket big"></i><h4>Concessions</h4><p>Senior citizen and divyang concessions on eligible trains.</p></div></div></div></section>
+<section class="bg-soft"><div class="container"><div class="center reveal"><h2 class="title">Know Before You Go</h2><span class="underline"></span></div><div class="svc-grid"><div class="card reveal d1"><i class="fa-solid fa-weight-hanging big"></i><h4>Luggage Limit</h4><p>Free limit: 40 kg in SL and 3A, 50 kg in 2A, 70 kg in 1A.</p></div><div class="card reveal d2"><i class="fa-solid fa-child big"></i><h4>Child Fare</h4><p>Under 5 free; 5–11 half fare; 12+ full fare.</p></div><div class="card reveal d3"><i class="fa-solid fa-bed big"></i><h4>Berth Preference</h4><p>Choose lower, middle, upper or side berths while booking.</p></div><div class="card reveal d4"><i class="fa-solid fa-ticket big"></i><h4>Concessions</h4><p>Senior citizen and divyang concessions on eligible trains.</p></div></div></div></section>
 <div id="site-footer"></div>
 <script src="script.js"></script>
 </body>
