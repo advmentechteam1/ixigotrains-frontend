@@ -2,16 +2,16 @@ const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 
 /* ---------- shared header / footer ---------- */
-const page = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+const page = ('/' + location.pathname.split('/').pop().replace(/.html$/, '').replace(/^index$/, '')).toLowerCase();
 const links = [
-  ['index.html', 'Home'], ['pnr.html', 'PNR Status'], ['schedule.html', 'Train Schedule'],
-  ['live.html', 'Live Status'], ['offers.html', 'Offers'], ['support.html', 'Support']
+  ['/', 'Home'], ['/pnr', 'PNR Status'], ['/schedule', 'Train Schedule'],
+  ['/live', 'Live Status'], ['/offers', 'Offers'], ['/support', 'Support']
 ];
 $('#site-header').outerHTML = `
 <header class="navbar" id="navbar">
-  <a href="index.html" class="logo"><svg class="logo-mark" aria-hidden="true" viewBox="0 0 48 48"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a7fe0"/><stop offset="1" stop-color="#0b3fa8"/></linearGradient></defs><rect width="48" height="48" rx="14" fill="url(#lg)"/><path d="M24 6c-6.8 0-12.2 5.3-12.2 11.9 0 8.4 12.2 20.6 12.2 20.6s12.2-12.2 12.2-20.6C36.2 11.3 30.8 6 24 6z" fill="#fff"/><circle cx="24" cy="17.8" r="5.2" fill="#0b3fa8"/><path d="M7 42.5c6-3.6 11-3.6 17-1.2s11 2.4 17-1.3" fill="none" stroke="#f47b20" stroke-width="3.2" stroke-linecap="round"/></svg><span class="logo-text">Ixigo<b>Trains</b><em>.in</em></span></a>
+  <a href="/" class="logo"><svg class="logo-mark" aria-hidden="true" viewBox="0 0 48 48"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a7fe0"/><stop offset="1" stop-color="#0b3fa8"/></linearGradient></defs><rect width="48" height="48" rx="14" fill="url(#lg)"/><path d="M24 6c-6.8 0-12.2 5.3-12.2 11.9 0 8.4 12.2 20.6 12.2 20.6s12.2-12.2 12.2-20.6C36.2 11.3 30.8 6 24 6z" fill="#fff"/><circle cx="24" cy="17.8" r="5.2" fill="#0b3fa8"/><path d="M7 42.5c6-3.6 11-3.6 17-1.2s11 2.4 17-1.3" fill="none" stroke="#f47b20" stroke-width="3.2" stroke-linecap="round"/></svg><span class="logo-text">Ixigo<b>Trains</b><em>.in</em></span></a>
   <nav id="nav">${links.map(([h, t]) => `<a href="${h}" class="${page === h ? 'active' : ''}">${t}</a>`).join('')}</nav>
-  <a href="support.html" class="login"><i class="fa-regular fa-user"></i> Login / Sign Up</a>
+  <a href="/support" class="login"><i class="fa-regular fa-user"></i> Login / Sign Up</a>
   <button class="menu-btn" id="menuBtn" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
 </header>`;
 $('#site-footer').outerHTML = `
@@ -19,12 +19,12 @@ $('#site-footer').outerHTML = `
   <div class="container">
     <div class="f-grid">
       <div class="f-brand">
-        <a href="index.html" class="logo light"><svg class="logo-mark" aria-hidden="true" viewBox="0 0 48 48"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a7fe0"/><stop offset="1" stop-color="#0b3fa8"/></linearGradient></defs><rect width="48" height="48" rx="14" fill="url(#lg)"/><path d="M24 6c-6.8 0-12.2 5.3-12.2 11.9 0 8.4 12.2 20.6 12.2 20.6s12.2-12.2 12.2-20.6C36.2 11.3 30.8 6 24 6z" fill="#fff"/><circle cx="24" cy="17.8" r="5.2" fill="#0b3fa8"/><path d="M7 42.5c6-3.6 11-3.6 17-1.2s11 2.4 17-1.3" fill="none" stroke="#f47b20" stroke-width="3.2" stroke-linecap="round"/></svg><span class="logo-text">Ixigo<b>Trains</b><em>.in</em></span></a>
+        <a href="/" class="logo light"><svg class="logo-mark" aria-hidden="true" viewBox="0 0 48 48"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a7fe0"/><stop offset="1" stop-color="#0b3fa8"/></linearGradient></defs><rect width="48" height="48" rx="14" fill="url(#lg)"/><path d="M24 6c-6.8 0-12.2 5.3-12.2 11.9 0 8.4 12.2 20.6 12.2 20.6s12.2-12.2 12.2-20.6C36.2 11.3 30.8 6 24 6z" fill="#fff"/><circle cx="24" cy="17.8" r="5.2" fill="#0b3fa8"/><path d="M7 42.5c6-3.6 11-3.6 17-1.2s11 2.4 17-1.3" fill="none" stroke="#f47b20" stroke-width="3.2" stroke-linecap="round"/></svg><span class="logo-text">Ixigo<b>Trains</b><em>.in</em></span></a>
         <p>Your trusted partner for train, bus and flight ticket booking, PNR status, live updates and more.</p>
       </div>
-      <div class="f-col"><h5>Quick Links</h5><a href="index.html">Home</a><a href="pnr.html">PNR Status</a><a href="schedule.html">Train Schedule</a><a href="live.html">Live Train Status</a></div>
-      <div class="f-col"><h5>Our Services</h5><a href="train.html">Book Train Tickets</a><a href="bus.html">Book Bus Tickets</a><a href="flight.html">Book Flight Tickets</a><a href="schedule.html">Train Between Stations</a><a href="offers.html">Travel Offers</a></div>
-      <div class="f-col"><h5>Support</h5><a href="support.html">Help Center</a><a href="support.html#contact">Contact Support</a><a href="support.html#faq">FAQs</a><a href="support.html">Terms &amp; Conditions</a></div>
+      <div class="f-col"><h5>Quick Links</h5><a href="/">Home</a><a href="/pnr">PNR Status</a><a href="/schedule">Train Schedule</a><a href="/live">Live Train Status</a></div>
+      <div class="f-col"><h5>Our Services</h5><a href="/train">Book Train Tickets</a><a href="/bus">Book Bus Tickets</a><a href="/flight">Book Flight Tickets</a><a href="/schedule">Train Between Stations</a><a href="/offers">Travel Offers</a></div>
+      <div class="f-col"><h5>Support</h5><a href="/support">Help Center</a><a href="/support#contact">Contact Support</a><a href="/support#faq">FAQs</a><a href="/support">Terms &amp; Conditions</a></div>
       <div class="f-col"><h5>Follow Us</h5><div class="social">
         <a href="#" class="fb"><i class="fa-brands fa-facebook-f"></i></a><a href="#" class="ig"><i class="fa-brands fa-instagram"></i></a>
         <a href="#" class="yt"><i class="fa-brands fa-youtube"></i></a><a href="#" class="x"><i class="fa-brands fa-x-twitter"></i></a></div></div>
@@ -108,7 +108,7 @@ if (bookForm) {
     const f = $('#from').value.trim(), t = $('#to').value.trim();
     if (!f || !t) return toast('Please enter origin and destination stations.');
     if (f === t) return toast('Origin and destination cannot be the same.');
-    location.href = `schedule.html?from=${encodeURIComponent(f)}&to=${encodeURIComponent(t)}&date=${$('#date').value}&cls=${encodeURIComponent($('#cls').value)}`;
+    location.href = `/schedule?from=${encodeURIComponent(f)}&to=${encodeURIComponent(t)}&date=${$('#date').value}&cls=${encodeURIComponent($('#cls').value)}`;
   });
   $$('.route').forEach(c => c.addEventListener('click', () => {
     $('#from').value = c.dataset.from; $('#to').value = c.dataset.to;
@@ -286,11 +286,11 @@ function goSearch(page, a, b, extra) {
 }
 if ($('#busForm') && !$('#busResults')) $('#busForm').addEventListener('submit', e => {
   e.preventDefault();
-  goSearch('bus.html', 'busFrom', 'busTo', `&date=${$('#busDate').value}&type=${encodeURIComponent($('#busType').value)}`);
+  goSearch('/bus', 'busFrom', 'busTo', `&date=${$('#busDate').value}&type=${encodeURIComponent($('#busType').value)}`);
 });
 if ($('#flightForm') && !$('#flightResults')) $('#flightForm').addEventListener('submit', e => {
   e.preventDefault();
-  goSearch('flight.html', 'flFrom', 'flTo', `&date=${$('#flDate').value}&ret=${$('#flRet').disabled ? '' : $('#flRet').value}&pax=${encodeURIComponent($('#flClass').value)}`);
+  goSearch('/flight', 'flFrom', 'flTo', `&date=${$('#flDate').value}&ret=${$('#flRet').disabled ? '' : $('#flRet').value}&pax=${encodeURIComponent($('#flClass').value)}`);
 });
 
 /* ---------- bus & flight result pages (demo data) ---------- */
