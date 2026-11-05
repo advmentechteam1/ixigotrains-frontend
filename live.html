@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Live Train Status – IxigoTrains.in</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<section class="page-hero ph-route" style="--ph-img:url('https://commons.wikimedia.org/wiki/Special:FilePath/Vande_Bharat_Express_train.jpg?width=1800')">
+  <div class="container reveal">
+    <span class="crumb"><i class="fa-solid fa-house"></i> Home / Live Status</span>
+    <h1>Track Your Train <span>Live</span></h1>
+    <p>Know exactly where your train is, how late it is running and when it reaches your station.</p>
+    <div class="route-line">
+      <div class="bar"><i></i></div>
+      <span class="runner"><i class="fa-solid fa-train"></i></span>
+      <div class="dot" style="left:0"><span>New Delhi</span></div>
+      <div class="dot" style="left:25%"><span>Kota Jn</span></div>
+      <div class="dot" style="left:50%"><span>Ratlam Jn</span></div>
+      <div class="dot" style="left:75%"><span>Surat</span></div>
+      <div class="dot" style="left:100%"><span>Mumbai</span></div>
+    </div>
+    <div class="chips" style="justify-content:center;margin-top:30px"><span><i class="fa-solid fa-satellite-dish"></i>Live location</span><span><i class="fa-solid fa-stopwatch"></i>Delay info</span><span><i class="fa-solid fa-bell"></i>Arrival alerts</span></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container" style="max-width:900px">
+    <div class="search-card" style="margin-top:-46px;margin-bottom:0;padding-top:24px">
+      <form class="search-row" id="liveForm" style="margin-top:0">
+        <div class="field wide"><i class="fa-solid fa-train"></i><div><label>Train Number / Name</label><input id="trainNo" placeholder="e.g. 12951 Mumbai Rajdhani"></div></div>
+        <div class="field small"><i class="fa-regular fa-calendar-days"></i><div><label>Start Date</label><input id="date" type="date"></div></div>
+        <button class="search-btn" type="submit"><i class="fa-solid fa-location-crosshairs"></i> Track Train</button>
+      </form>
+    </div>
+    <div id="liveResult"></div>
+  </div>
+</section>
+
+<section class="bg-soft">
+  <div class="container">
+    <div class="center reveal"><h2 class="title">Why Track Your Train?</h2><span class="underline"></span></div>
+    <div class="svc-grid">
+      <div class="card reveal d1"><i class="fa-solid fa-satellite-dish big"></i><h4>Real-time Location</h4><p>See the last station crossed and the next upcoming stop.</p></div>
+      <div class="card reveal d2"><i class="fa-solid fa-stopwatch big"></i><h4>Delay Info</h4><p>Know how many minutes late the train is running.</p></div>
+      <div class="card reveal d3"><i class="fa-solid fa-bell big"></i><h4>Platform Alerts</h4><p>Get alerts before your train arrives at your station.</p></div>
+      <div class="card reveal d4"><i class="fa-solid fa-people-arrows big"></i><h4>Pick-up Easy</h4><p>Plan pick-ups for family and friends without waiting.</p></div>
+    </div>
+  </div>
+</section>
+
+<!--extra-->
+<section>
+  <div class="container">
+    <div class="center reveal"><h2 class="title">How Live Tracking Works</h2><span class="underline"></span></div>
+    <div class="steps" style="grid-template-columns:repeat(3,1fr)">
+      <div class="step reveal d1"><div class="num">1</div><h4>Enter Train</h4><p>Type the train number or name.</p></div>
+      <div class="step reveal d2"><div class="num">2</div><h4>See Position</h4><p>View the last crossed station and delay.</p></div>
+      <div class="step reveal d3"><div class="num">3</div><h4>Plan Ahead</h4><p>Know the arrival time at your station.</p></div>
+    </div>
+  </div>
+</section>
+<section class="bg-soft">
+  <div class="container">
+    <div class="center reveal"><h2 class="title">Live Status FAQs</h2><span class="underline"></span></div>
+    <div class="faq reveal">
+      <div class="faq-item"><button class="faq-q">How accurate is the live status? <i class="fa-solid fa-plus"></i></button><div class="faq-a">Position updates every few minutes as the train crosses stations and signals.</div></div>
+      <div class="faq-item"><button class="faq-q">Can I track a train that started yesterday? <i class="fa-solid fa-plus"></i></button><div class="faq-a">Yes. Choose the correct start date before tracking.</div></div>
+      <div class="faq-item"><button class="faq-q">What does "+12 min" mean? <i class="fa-solid fa-plus"></i></button><div class="faq-a">The train is running 12 minutes behind its scheduled time.</div></div>
+    </div>
+  </div>
+</section>
+<!--more-->
+<section class="bg-soft"><div class="container"><div class="center reveal"><h2 class="title">Live Status Glossary</h2><span class="underline"></span><p class="sub">Terms you will see while tracking.</p></div><div class="panel reveal" style="margin:30px 0 0"><div class="table-wrap"><table class="tbl"><thead><tr><th>Term</th><th>Meaning</th></tr></thead><tbody><tr><td><b>ETA</b></td><td>Expected time of arrival at a station</td></tr><tr><td><b>ETD</b></td><td>Expected time of departure from a station</td></tr><tr><td><b>Delay</b></td><td>Minutes the train is behind its scheduled time</td></tr><tr><td><b>Halt</b></td><td>Time the train stops at a station</td></tr><tr><td><b>Platform</b></td><td>Platform number the train is expected on</td></tr><tr><td><b>Distance</b></td><td>Kilometres covered from the starting station</td></tr></tbody></table></div></div></div></section>
+<!--more-->
+<section><div class="container"><div class="center reveal"><h2 class="title">Tips for Pick-up &amp; Drop</h2><span class="underline"></span></div><div class="svc-grid"><div class="card reveal d1"><i class="fa-solid fa-person-walking-luggage big"></i><h4>Reach on Time</h4><p>Track ETA and leave home when the train is 1 hour away.</p></div><div class="card reveal d2"><i class="fa-solid fa-car big"></i><h4>Plan Pick-up</h4><p>Share live status with family so they can arrive on time.</p></div><div class="card reveal d3"><i class="fa-solid fa-cloud-rain big"></i><h4>Weather Delays</h4><p>Fog and monsoon can delay trains; check status often.</p></div><div class="card reveal d4"><i class="fa-solid fa-bell big"></i><h4>Set Alerts</h4><p>Get alerts when your train is near your station.</p></div></div></div></section>
+<div id="site-footer"></div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Train Schedule – IxigoTrains.in</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<section class="page-hero ph-frame">
+  <div class="container ph-grid">
+    <div class="frame reveal left"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Vande_Bharat_Express_around_Mumbai.jpg?width=1000" alt="Vande Bharat Express" data-fallback><span class="badge2"><i class="fa-solid fa-gauge-high"></i> Vande Bharat Express</span></div>
+    <div class="reveal right">
+      <span class="crumb"><i class="fa-solid fa-house"></i> Home / Train Schedule</span>
+      <h1>Find <span>Trains</span> &amp; Full Timetables</h1>
+      <p>Search trains between any two stations, compare timings and fares, and see every stop on the route.</p>
+      <div class="mini-stats"><div><b>12,000+</b><span>Trains</span></div><div><b>7,500+</b><span>Stations</span></div><div><b>60 days</b><span>Advance booking</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="search-card" style="margin-top:-46px;margin-bottom:0;padding-top:24px">
+      <h3 style="color:var(--navy)"><i class="fa-solid fa-route" style="color:var(--orange)"></i> Trains Between Stations</h3>
+      <form class="search-row" id="betweenForm">
+        <div class="field"><i class="fa-solid fa-location-dot"></i><div><label>From</label><input id="from" placeholder="Origin Station" list="stations"></div></div>
+        <button type="button" class="swap" id="swap" aria-label="Swap"><i class="fa-solid fa-right-left"></i></button>
+        <div class="field"><i class="fa-solid fa-location-dot"></i><div><label>To</label><input id="to" placeholder="Destination Station" list="stations"></div></div>
+        <div class="field"><i class="fa-regular fa-calendar-days"></i><div><label>Journey Date</label><input id="date" type="date"></div></div>
+        <div class="field small"><div><label>Class</label><select id="cls"><option>All Classes</option><option>SL</option><option>3A</option><option>2A</option><option>1A</option><option>CC</option></select></div></div>
+        <button class="search-btn" type="submit">Find Trains</button>
+      </form>
+    </div>
+    <div id="trainList"></div>
+
+    <div class="panel" style="margin-top:50px">
+      <h3 style="color:var(--navy)"><i class="fa-regular fa-calendar-days" style="color:var(--orange)"></i> Full Train Timetable</h3>
+      <form class="search-row" id="trainForm">
+        <div class="field wide"><i class="fa-solid fa-train"></i><div><label>Train Number / Name</label><input id="trainNo" placeholder="e.g. 12951 Mumbai Rajdhani"></div></div>
+        <button class="search-btn" type="submit">Get Schedule</button>
+      </form>
+    </div>
+    <div id="stopList"></div>
+  </div>
+</section>
+
+<section class="bg-soft">
+  <div class="container">
+    <div class="center reveal"><h2 class="title">Travel Tips</h2><span class="underline"></span></div>
+    <div class="tips">
+      <div class="card reveal d1"><i class="fa-regular fa-calendar-check big"></i><h4>Book Early</h4><p>Tickets open 60 days in advance. Popular trains fill up fast.</p></div>
+      <div class="card reveal d2"><i class="fa-solid fa-id-card big"></i><h4>Carry Valid ID</h4><p>Keep one original photo ID while travelling.</p></div>
+      <div class="card reveal d3"><i class="fa-solid fa-clock big"></i><h4>Reach Early</h4><p>Arrive at the station at least 30 minutes before departure.</p></div>
+    </div>
+  </div>
+</section>
+
+<!--extra-->
+<section>
+  <div class="container">
+    <div class="center reveal"><h2 class="title">Popular Trains</h2><span class="underline"></span><p class="sub">Most booked trains across India.</p></div>
+    <div class="offer-grid">
+      <div class="offer reveal d1"><div class="top"><h3>Rajdhani</h3><small>Premium · AC only</small></div><div class="body"><p>Fast overnight service connecting Delhi with major metros.</p><div class="coupon"><span>12951</span><button onclick="location.href='live.html'">Track</button></div></div></div>
+      <div class="offer reveal d2"><div class="top"><h3>Shatabdi</h3><small>Day · Chair car</small></div><div class="body"><p>Comfortable daytime intercity travel with meals included.</p><div class="coupon"><span>12002</span><button onclick="location.href='live.html'">Track</button></div></div></div>
+      <div class="offer reveal d3"><div class="top"><h3>Vande Bharat</h3><small>Semi high-speed</small></div><div class="body"><p>Modern, fast and comfortable trains with premium interiors.</p><div class="coupon"><span>22435</span><button onclick="location.href='live.html'">Track</button></div></div></div>
+    </div>
+  </div>
+</section>
+<section class="bg-soft">
+  <div class="container">
+    <div class="center reveal"><h2 class="title">Major Railway Stations</h2><span class="underline"></span></div>
+    <div class="svc-grid">
+      <div class="card reveal d1"><i class="fa-solid fa-building big"></i><h4>New Delhi</h4><p>NDLS · 16 platforms</p></div>
+      <div class="card reveal d2"><i class="fa-solid fa-building big"></i><h4>Mumbai Central</h4><p>BCT · 7 platforms</p></div>
+      <div class="card reveal d3"><i class="fa-solid fa-building big"></i><h4>Howrah Jn</h4><p>HWH · 23 platforms</p></div>
+      <div class="card reveal d4"><i class="fa-solid fa-building big"></i><h4>Chennai Central</h4><p>MAS · 17 platforms</p></div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="center reveal"><h2 class="title">Seat Availability Guide</h2><span class="underline"></span></div>
+    <div class="cls-grid">
+      <div class="cls reveal d1"><b>AVAILABLE</b><span>Book</span><p>Seats are free. Book now to confirm instantly.</p></div>
+      <div class="cls reveal d2"><b>RAC</b><span>Travel</span><p>You get a shared seat and may get a full berth later.</p></div>
+      <div class="cls reveal d3"><b>WL</b><span>Wait</span><p>Waitlisted. Confirmed if earlier passengers cancel.</p></div>
+    </div>
+  </div>
+</section>
+<!--more-->
+<section class="bg-soft"><div class="container"><div class="center reveal"><h2 class="title">Types of Trains in India</h2><span class="underline"></span><p class="sub">Know your train before you book.</p></div><div class="panel reveal" style="margin:30px 0 0"><div class="table-wrap"><table class="tbl"><thead><tr><th>Train</th><th>Stops</th><th>Typical use</th><th>Meals</th></tr></thead><tbody><tr><td><b>Vande Bharat</b></td><td>Few</td><td>Semi high-speed day travel</td><td>Included</td></tr><tr><td><b>Rajdhani</b></td><td>Very few</td><td>Delhi to state capitals</td><td>Included</td></tr><tr><td><b>Shatabdi</b></td><td>Few</td><td>Same-day intercity</td><td>Included</td></tr><tr><td><b>Duronto</b></td><td>Technical stops only</td><td>Non-stop long distance</td><td>Optional</td></tr><tr><td><b>Superfast Express</b></td><td>Moderate</td><td>Everyday long routes</td><td>Optional</td></tr><tr><td><b>Passenger / Local</b></td><td>Every station</td><td>Short local travel</td><td>Not available</td></tr></tbody></table></div></div></div></section>
+<!--more-->
+<section><div class="container"><div class="center reveal"><h2 class="title">Common Station Codes</h2><span class="underline"></span><p class="sub">Handy codes used while searching.</p></div><div class="panel reveal" style="margin:30px 0 0"><div class="table-wrap"><table class="tbl"><thead><tr><th>Station</th><th>Code</th><th>City</th><th>Zone</th></tr></thead><tbody><tr><td><b>New Delhi</b></td><td>NDLS</td><td>Delhi</td><td>Northern</td></tr><tr><td><b>Mumbai Central</b></td><td>BCT</td><td>Mumbai</td><td>Western</td></tr><tr><td><b>Howrah Junction</b></td><td>HWH</td><td>Kolkata</td><td>Eastern</td></tr><tr><td><b>Chennai Central</b></td><td>MAS</td><td>Chennai</td><td>Southern</td></tr><tr><td><b>Bengaluru City</b></td><td>SBC</td><td>Bengaluru</td><td>South Western</td></tr><tr><td><b>Lucknow</b></td><td>LKO</td><td>Lucknow</td><td>Northern</td></tr><tr><td><b>Jaipur</b></td><td>JP</td><td>Jaipur</td><td>North Western</td></tr><tr><td><b>Varanasi</b></td><td>BSB</td><td>Varanasi</td><td>North Eastern</td></tr></tbody></table></div></div></div></section>
+<!--more-->
+<section class="bg-soft"><div class="container"><div class="center reveal"><h2 class="title">Know Before You Go</h2><span class="underline"></span></div><div class="svc-grid"><div class="card reveal d1"><i class="fa-solid fa-weight-hanging big"></i><h4>Luggage Limit</h4><p>Free limit 40 kg in SL, 50 kg in 3A and 70 kg in 1A.</p></div><div class="card reveal d2"><i class="fa-solid fa-child big"></i><h4>Child Fare</h4><p>Under 5 free; 5–11 half fare; 12+ full fare.</p></div><div class="card reveal d3"><i class="fa-solid fa-bed big"></i><h4>Berth Preference</h4><p>Choose lower, middle, upper or side berths while booking.</p></div><div class="card reveal d4"><i class="fa-solid fa-ticket big"></i><h4>Concessions</h4><p>Senior citizen and divyang concessions on eligible trains.</p></div></div></div></section>
+<div id="site-footer"></div>
+<script src="script.js"></script>
+</body>
+</html>

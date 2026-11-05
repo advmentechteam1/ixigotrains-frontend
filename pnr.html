@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PNR Status – IxigoTrains.in</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<section class="page-hero ph-center" style="--ph-img:url('https://commons.wikimedia.org/wiki/Special:FilePath/Howrah_Railway_Station_01.jpg?width=1800')">
+  <div class="tkt l"><small>PNR 4521896307</small><b>NDLS → BCT</b><small>12951 · 3A · B2/24</small><br><span class="pill ok">CONFIRMED</span></div>
+  <div class="tkt r"><small>PNR 8230174455</small><b>HWH → NDLS</b><small>12302 · SL · S5/41</small><br><span class="pill wl">WL 12</span></div>
+  <div class="container"><div class="ph-wrap reveal">
+    <span class="crumb"><i class="fa-solid fa-house"></i> Home / PNR Status</span>
+    <h1>Check your <span>PNR Status</span> in seconds</h1>
+    <p>Get your booking, seat, coach and chart status instantly — no login needed.</p>
+    <div class="chips"><span><i class="fa-solid fa-bolt"></i>Instant result</span><span><i class="fa-solid fa-lock"></i>100% private</span><span><i class="fa-solid fa-mobile-screen"></i>Works on mobile</span></div>
+  </div></div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container" style="max-width:900px">
+    <div class="search-card" style="margin-top:-46px;margin-bottom:0;padding-top:24px">
+      <form class="search-row" id="pnrForm" style="margin-top:0">
+        <div class="field wide"><i class="fa-solid fa-ticket"></i><div><label>PNR Number</label><input id="pnr" maxlength="10" inputmode="numeric" placeholder="Enter 10 digit PNR"></div></div>
+        <button class="search-btn" type="submit">Check PNR</button>
+      </form>
+      <small style="color:var(--muted);display:block;margin-top:10px">Try any 10 digit number to see a demo result.</small>
+    </div>
+    <div id="pnrResult"></div>
+  </div>
+</section>
+
+<section class="bg-soft">
+  <div class="container">
+    <div class="center reveal"><h2 class="title">Understanding Your Ticket Status</h2><span class="underline"></span></div>
+    <div class="tips">
+      <div class="card reveal d1"><i class="fa-solid fa-circle-check big" style="color:#1c8a43;background:#e3f6e8"></i><h4>CNF – Confirmed</h4><p>Your berth or seat is confirmed with coach and seat number.</p></div>
+      <div class="card reveal d2"><i class="fa-solid fa-hourglass-half big" style="color:#c85d08;background:#ffe9d6"></i><h4>WL – Waitlisted</h4><p>Your ticket moves up as confirmed passengers cancel.</p></div>
+      <div class="card reveal d3"><i class="fa-solid fa-couch big"></i><h4>RAC</h4><p>Reservation Against Cancellation – you get a shared seat to travel.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="center reveal"><h2 class="title">PNR FAQs</h2><span class="underline"></span></div>
+    <div class="faq reveal">
+      <div class="faq-item"><button class="faq-q">Where can I find my PNR number? <i class="fa-solid fa-plus"></i></button><div class="faq-a">It is a 10 digit number printed on your e-ticket, SMS and booking confirmation email.</div></div>
+      <div class="faq-item"><button class="faq-q">When is the final chart prepared? <i class="fa-solid fa-plus"></i></button><div class="faq-a">Charts are usually prepared about 4 hours before departure and a second chart 30 minutes before.</div></div>
+      <div class="faq-item"><button class="faq-q">What happens to a waitlisted ticket? <i class="fa-solid fa-plus"></i></button><div class="faq-a">If it is not confirmed after the final chart, it is cancelled automatically and the refund is initiated.</div></div>
+    </div>
+  </div>
+</section>
+
+<!--extra-->
+<section>
+  <div class="container">
+    <div class="center reveal"><h2 class="title">How to Check PNR Status</h2><span class="underline"></span><p class="sub">Three simple steps to know your ticket status.</p></div>
+    <div class="steps" style="grid-template-columns:repeat(3,1fr)">
+      <div class="step reveal d1"><div class="num">1</div><h4>Find your PNR</h4><p>It is printed on your e-ticket, SMS and email.</p></div>
+      <div class="step reveal d2"><div class="num">2</div><h4>Enter 10 digits</h4><p>Type the number in the box above.</p></div>
+      <div class="step reveal d3"><div class="num">3</div><h4>View status</h4><p>See coach, seat and chart status instantly.</p></div>
+    </div>
+  </div>
+</section>
+<section class="bg-soft">
+  <div class="container">
+    <div class="center reveal"><h2 class="title">Chart Preparation Timeline</h2><span class="underline"></span></div>
+    <div class="steps" style="grid-template-columns:repeat(4,1fr)">
+      <div class="step reveal d1"><div class="num"><i class="fa-solid fa-ticket"></i></div><h4>Booking</h4><p>Ticket booked with CNF, RAC or WL status.</p></div>
+      <div class="step reveal d2"><div class="num"><i class="fa-solid fa-arrows-rotate"></i></div><h4>Updates</h4><p>Waitlist moves up as passengers cancel.</p></div>
+      <div class="step reveal d3"><div class="num"><i class="fa-solid fa-table-list"></i></div><h4>Chart: 4 hrs</h4><p>First chart is prepared before departure.</p></div>
+      <div class="step reveal d4"><div class="num"><i class="fa-solid fa-flag-checkered"></i></div><h4>Final: 30 min</h4><p>Final chart decides your confirmation.</p></div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="center reveal"><h2 class="title">Useful Tools for Your Journey</h2><span class="underline"></span></div>
+    <div class="svc-grid">
+      <a href="live.html" class="card reveal d1"><i class="fa-solid fa-location-dot big"></i><h4>Live Train Status</h4><p>Track your train in real time.</p></a>
+      <a href="schedule.html" class="card reveal d2"><i class="fa-solid fa-calendar-days big"></i><h4>Train Schedule</h4><p>View timings and stops.</p></a>
+      <a href="offers.html" class="card reveal d3"><i class="fa-solid fa-tags big"></i><h4>Offers</h4><p>Save on your next booking.</p></a>
+      <a href="support.html" class="card reveal d4"><i class="fa-solid fa-headset big"></i><h4>Need Help?</h4><p>Talk to our support team.</p></a>
+    </div>
+  </div>
+</section>
+<!--more-->
+<section class="bg-soft"><div class="container"><div class="center reveal"><h2 class="title">PNR Status Codes</h2><span class="underline"></span><p class="sub">What each status in your ticket means.</p></div><div class="panel reveal" style="margin:30px 0 0"><div class="table-wrap"><table class="tbl"><thead><tr><th>Code</th><th>Full form</th><th>Meaning</th></tr></thead><tbody><tr><td><b>CNF</b></td><td>Confirmed</td><td>Seat/berth allotted with coach and seat number</td></tr><tr><td><b>RAC</b></td><td>Reservation Against Cancellation</td><td>Shared berth; may upgrade to full berth</td></tr><tr><td><b>GNWL</b></td><td>General Waiting List</td><td>Waitlist from the originating station</td></tr><tr><td><b>RLWL</b></td><td>Remote Location Waiting List</td><td>Waitlist for intermediate stations</td></tr><tr><td><b>PQWL</b></td><td>Pooled Quota Waiting List</td><td>Waitlist for pooled quota, lower confirmation chance</td></tr><tr><td><b>RSWL</b></td><td>Roadside Waiting List</td><td>Waitlist for roadside stations</td></tr><tr><td><b>TQWL</b></td><td>Tatkal Waiting List</td><td>Waitlist under Tatkal quota</td></tr></tbody></table></div></div></div></section>
+<!--more-->
+<section><div class="container"><div class="center reveal"><h2 class="title">What you can see in PNR Status</h2><span class="underline"></span></div><div class="svc-grid"><div class="card reveal d1"><i class="fa-solid fa-train big"></i><h4>Train Details</h4><p>Train number, name, date and class of travel.</p></div><div class="card reveal d2"><i class="fa-solid fa-location-dot big"></i><h4>Journey Stations</h4><p>Boarding, destination and reservation upto points.</p></div><div class="card reveal d3"><i class="fa-solid fa-users big"></i><h4>Passenger Info</h4><p>Booking and current status for every passenger.</p></div><div class="card reveal d4"><i class="fa-solid fa-table-list big"></i><h4>Chart Status</h4><p>Whether the final chart has been prepared.</p></div></div></div></section>
+<!--more-->
+<section class="bg-soft"><div class="container"><div class="center reveal"><h2 class="title">More PNR Questions</h2><span class="underline"></span></div><div class="faq reveal"><div class="faq-item"><button class="faq-q">Is my PNR valid after the journey? <i class="fa-solid fa-plus"></i></button><div class="faq-a">PNR details are available for a few days after departure, after which they expire.</div></div><div class="faq-item"><button class="faq-q">Why did my waitlist number not change? <i class="fa-solid fa-plus"></i></button><div class="faq-a">Waitlist moves only when confirmed passengers cancel; it may stay unchanged for a while.</div></div><div class="faq-item"><button class="faq-q">What does "Chart not prepared" mean? <i class="fa-solid fa-plus"></i></button><div class="faq-a">Charts are prepared a few hours before departure. Until then status can still change.</div></div><div class="faq-item"><button class="faq-q">Can I check PNR for someone else? <i class="fa-solid fa-plus"></i></button><div class="faq-a">Yes. Anyone with the 10 digit PNR can check the status.</div></div></div></div></section>
+<div id="site-footer"></div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support – IxigoTrains.in</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<section class="page-hero ph-light">
+  <div class="container ph-grid">
+    <div class="reveal left">
+      <span class="crumb"><i class="fa-solid fa-house"></i> Home / Support</span>
+      <h1>How can we <span>help</span> you?</h1>
+      <p>Our support team is available 24×7 for bookings, refunds, payments and travel queries.</p>
+      <form class="help-search" onsubmit="event.preventDefault();document.getElementById('faq').scrollIntoView({behavior:'smooth'})"><input placeholder="Search help topics, e.g. refund"><button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Search</button></form>
+      <div class="chips"><span><i class="fa-solid fa-headset"></i>24×7 support</span><span><i class="fa-solid fa-clock"></i>2 min chat wait</span><span><i class="fa-solid fa-language"></i>Hindi &amp; English</span></div>
+    </div>
+    <div class="tiles reveal right">
+      <div class="tile"><i class="fa-solid fa-ticket"></i>Booking</div>
+      <div class="tile"><i class="fa-solid fa-rotate-left"></i>Refunds</div>
+      <div class="tile"><i class="fa-solid fa-credit-card"></i>Payments</div>
+      <div class="tile"><i class="fa-solid fa-user-shield"></i>Account</div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="card reveal d1"><i class="fa-solid fa-book-open big"></i><h4>Help Center</h4><p>Browse answers to common questions<br>Available 24×7</p></div>
+      <div class="card reveal d2"><i class="fa-solid fa-paper-plane big"></i><h4>Send a Message</h4><p>Use the form below<br>Reply within 24 hours</p></div>
+      <div class="card reveal d3"><i class="fa-solid fa-comments big"></i><h4>Live Chat</h4><p>Chat with an agent<br>Average wait 2 minutes</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-soft">
+  <div class="container form-grid">
+    <div class="reveal left">
+      <h2 class="title">Send Us a Message</h2><span class="underline"></span>
+      <p class="sub" style="margin-bottom:24px">Tell us about your issue and we will get back to you quickly.</p>
+      <form class="form" id="contactForm">
+        <input required placeholder="Your name">
+        <input required type="email" placeholder="Email address">
+        <select><option>Booking issue</option><option>Refund / cancellation</option><option>Payment problem</option><option>Other</option></select>
+        <textarea required placeholder="Describe your issue"></textarea>
+        <button class="btn" type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+      </form>
+    </div>
+    <div class="reveal right" id="faq">
+      <h2 class="title">Quick Answers</h2><span class="underline"></span>
+      <div class="faq" style="margin-top:0">
+        <div class="faq-item"><button class="faq-q">How do I cancel my ticket? <i class="fa-solid fa-plus"></i></button><div class="faq-a">Go to Support, share your PNR and request cancellation. Refund is processed as per railway rules.</div></div>
+        <div class="faq-item"><button class="faq-q">How long do refunds take? <i class="fa-solid fa-plus"></i></button><div class="faq-a">Refunds usually reach your account within 3–7 working days.</div></div>
+        <div class="faq-item"><button class="faq-q">Payment failed but money deducted? <i class="fa-solid fa-plus"></i></button><div class="faq-a">The amount is automatically refunded within 5–7 working days if the booking was not completed.</div></div>
+        <div class="faq-item"><button class="faq-q">Can I change passenger details? <i class="fa-solid fa-plus"></i></button><div class="faq-a">Passenger names cannot be changed after booking. You may cancel and rebook.</div></div>
+        <div class="faq-item"><button class="faq-q">Terms &amp; Conditions <i class="fa-solid fa-plus"></i></button><div class="faq-a">Bookings are subject to Indian Railways rules. IxigoTrains.in acts as a booking facilitator.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--extra-->
+<section>
+  <div class="container">
+    <div class="center reveal"><h2 class="title">Browse Help Topics</h2><span class="underline"></span></div>
+    <div class="svc-grid">
+      <div class="card reveal d1"><i class="fa-solid fa-ticket big"></i><h4>Booking</h4><p>Tickets, passengers and seat selection.</p></div>
+      <div class="card reveal d2"><i class="fa-solid fa-rotate-left big"></i><h4>Cancellation &amp; Refund</h4><p>Rules, timelines and charges.</p></div>
+      <div class="card reveal d3"><i class="fa-solid fa-credit-card big"></i><h4>Payments</h4><p>Failed or pending transactions.</p></div>
+      <div class="card reveal d4"><i class="fa-solid fa-user-shield big"></i><h4>Account &amp; Security</h4><p>Login, profile and privacy.</p></div>
+    </div>
+  </div>
+</section>
+<section class="bg-soft">
+  <div class="container split" style="grid-template-columns:1fr 1fr">
+    <div class="reveal left"><h2 class="title">Support Hours</h2><span class="underline"></span>
+      <ul class="checks"><li><i class="fa-solid fa-clock"></i> Live chat &amp; help center: 24×7</li><li><i class="fa-solid fa-envelope-open-text"></i> Message replies: within 24 hours</li><li><i class="fa-solid fa-language"></i> Hindi and English supported</li></ul></div>
+    <div class="reveal right"><div class="panel" style="margin:0"><h4 style="color:var(--navy);margin-bottom:12px">Support response times</h4>
+      <div class="progress"><div style="width:96%"></div></div><small>Help center — instant</small>
+      <div class="progress"><div style="width:85%"></div></div><small>Live chat — ~2 minutes</small>
+      <div class="progress"><div style="width:60%"></div></div><small>Contact form — within 24 hours</small></div></div>
+  </div>
+</section>
+<!--more-->
+<section class="bg-soft"><div class="container"><div class="center reveal"><h2 class="title">Cancellation &amp; Refund Charges</h2><span class="underline"></span><p class="sub">Charges depend on how early you cancel.</p></div><div class="panel reveal" style="margin:30px 0 0"><div class="table-wrap"><table class="tbl"><thead><tr><th>Time before departure</th><th>Confirmed ticket</th><th>Waitlisted ticket</th></tr></thead><tbody><tr><td><b>48 hours or more</b></td><td>Flat deduction per class</td><td>Full refund (minus clerkage)</td></tr><tr><td><b>12 to 48 hours</b></td><td>25% of fare</td><td>Full refund (minus clerkage)</td></tr><tr><td><b>4 to 12 hours</b></td><td>50% of fare</td><td>Full refund (minus clerkage)</td></tr><tr><td><b>Less than 4 hours</b></td><td>No refund</td><td>Auto-cancelled and refunded</td></tr></tbody></table></div></div></div></section>
+<!--more-->
+<section><div class="container"><div class="center reveal"><h2 class="title">Our Policies</h2><span class="underline"></span></div><div class="svc-grid"><div class="card reveal d1"><i class="fa-solid fa-file-shield big"></i><h4>Privacy Policy</h4><p>We protect your personal data and never sell it.</p></div><div class="card reveal d2"><i class="fa-solid fa-file-contract big"></i><h4>Terms of Use</h4><p>Rules for using IxigoTrains.in and booking tickets.</p></div><div class="card reveal d3"><i class="fa-solid fa-money-bill-transfer big"></i><h4>Refund Policy</h4><p>Refund timelines and rules for each payment mode.</p></div><div class="card reveal d4"><i class="fa-solid fa-scale-balanced big"></i><h4>Grievance Redressal</h4><p>Raise a complaint and track its resolution.</p></div></div></div></section>
+<!--more-->
+<section class="bg-soft"><div class="container"><div class="center reveal"><h2 class="title">More Help Questions</h2><span class="underline"></span></div><div class="faq reveal"><div class="faq-item"><button class="faq-q">How do I download my e-ticket? <i class="fa-solid fa-plus"></i></button><div class="faq-a">Open your booking confirmation and choose Download. A copy is also sent by SMS and email.</div></div><div class="faq-item"><button class="faq-q">Can I book for someone else? <i class="fa-solid fa-plus"></i></button><div class="faq-a">Yes. Enter the traveller details exactly as per their ID.</div></div><div class="faq-item"><button class="faq-q">My refund has not arrived yet <i class="fa-solid fa-plus"></i></button><div class="faq-a">Refunds take 3–7 working days. If it is delayed, send us a message with your PNR.</div></div><div class="faq-item"><button class="faq-q">How do I report a problem on a train? <i class="fa-solid fa-plus"></i></button><div class="faq-a">For on-board emergencies call railway helpline 139 immediately.</div></div></div></div></section>
+<div id="site-footer"></div>
+<script src="script.js"></script>
+</body>
+</html>
